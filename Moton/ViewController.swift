@@ -7,6 +7,7 @@
 // maaf gaes aku gk mau ikut ngoding
 
 // bye
+// iya designer
 import UIKit
 
 class ViewController: UIViewController {
