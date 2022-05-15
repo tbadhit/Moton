@@ -10,7 +10,7 @@
 // iya designer
 import UIKit
 
-class ViewController: UIViewController {
+class DateViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()

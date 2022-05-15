@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8CF282FF874009DC3AF /* AppDelegate.swift */; };
 		1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8D1282FF874009DC3AF /* SceneDelegate.swift */; };
-		1618D8D4282FF874009DC3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8D3282FF874009DC3AF /* ViewController.swift */; };
+		1618D8D4282FF874009DC3AF /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8D3282FF874009DC3AF /* DateViewController.swift */; };
 		1618D8D7282FF874009DC3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8D5282FF874009DC3AF /* Main.storyboard */; };
 		1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8D8282FF874009DC3AF /* Moton.xcdatamodeld */; };
 		1618D8DC282FF876009DC3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DB282FF876009DC3AF /* Assets.xcassets */; };
 		1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */; };
+		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
+		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1618D8CC282FF874009DC3AF /* Moton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1618D8CF282FF874009DC3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1618D8D1282FF874009DC3AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1618D8D3282FF874009DC3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1618D8D3282FF874009DC3AF /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		1618D8D6282FF874009DC3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1618D8D9282FF874009DC3AF /* Moton.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moton.xcdatamodel; sourceTree = "<group>"; };
 		1618D8DB282FF876009DC3AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1618D8DE282FF876009DC3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1618D8E0282FF876009DC3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +64,14 @@
 			children = (
 				1618D8CF282FF874009DC3AF /* AppDelegate.swift */,
 				1618D8D1282FF874009DC3AF /* SceneDelegate.swift */,
-				1618D8D3282FF874009DC3AF /* ViewController.swift */,
+				1618D8D3282FF874009DC3AF /* DateViewController.swift */,
 				1618D8D5282FF874009DC3AF /* Main.storyboard */,
 				1618D8DB282FF876009DC3AF /* Assets.xcassets */,
 				1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */,
 				1618D8E0282FF876009DC3AF /* Info.plist */,
 				1618D8D8282FF874009DC3AF /* Moton.xcdatamodeld */,
+				4F9EA8F228315E2300CE6920 /* JournalViewController.swift */,
+				4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */,
 			);
 			path = Moton;
 			sourceTree = "<group>";
@@ -141,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1618D8D4282FF874009DC3AF /* ViewController.swift in Sources */,
+				1618D8D4282FF874009DC3AF /* DateViewController.swift in Sources */,
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
+				4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */,
+				4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
