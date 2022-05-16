@@ -14,6 +14,8 @@
 		1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8D8282FF874009DC3AF /* Moton.xcdatamodeld */; };
 		1618D8DC282FF876009DC3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DB282FF876009DC3AF /* Assets.xcassets */; };
 		1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */; };
+		16247FCA2832527100D885B3 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FC92832527100D885B3 /* Schedule.swift */; };
+		16247FCC2832843B00D885B3 /* Date+Moton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FCB2832843B00D885B3 /* Date+Moton.swift */; };
 		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
 		ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE680562832264600B734C9 /* JournalListTableViewCell.swift */; };
@@ -36,6 +38,8 @@
 		1618D8DB282FF876009DC3AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1618D8DE282FF876009DC3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1618D8E0282FF876009DC3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16247FC92832527100D885B3 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		16247FCB2832843B00D885B3 /* Date+Moton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Moton.swift"; sourceTree = "<group>"; };
 		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
 		ADE680562832264600B734C9 /* JournalListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,34 +82,84 @@
 		1618D8CE282FF874009DC3AF /* Moton */ = {
 			isa = PBXGroup;
 			children = (
-				ADE680512832152600B734C9 /* Cell */,
-				1618D8CF282FF874009DC3AF /* AppDelegate.swift */,
-				1618D8D1282FF874009DC3AF /* SceneDelegate.swift */,
-				1618D8D3282FF874009DC3AF /* DateViewController.swift */,
-				1618D8D5282FF874009DC3AF /* Main.storyboard */,
+				16247FC5283250FD00D885B3 /* Base */,
+				16247FC4283250F100D885B3 /* Model */,
+				16247FC3283250E900D885B3 /* Controller */,
+				16247FC2283250E000D885B3 /* View */,
 				1618D8DB282FF876009DC3AF /* Assets.xcassets */,
-				1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */,
 				1618D8E0282FF876009DC3AF /* Info.plist */,
 				1618D8D8282FF874009DC3AF /* Moton.xcdatamodeld */,
-				4F9EA8F228315E2300CE6920 /* JournalViewController.swift */,
-				4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */,
 			);
 			path = Moton;
 			sourceTree = "<group>";
 		};
-		ADE680512832152600B734C9 /* Cell */ = {
+		16247FC2283250E000D885B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADE680562832264600B734C9 /* JournalListTableViewCell.swift */,
 				ADE680572832264600B734C9 /* JournalListTableViewCell.xib */,
-				ADE6805A2832269900B734C9 /* ScheduleListTableViewCell.swift */,
 				ADE6805B2832269900B734C9 /* ScheduleListTableViewCell.xib */,
-				ADE6805E283226CE00B734C9 /* HistoryListTableViewCell.swift */,
 				ADE6805F283226CE00B734C9 /* HistoryListTableViewCell.xib */,
-				ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */,
 				ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */,
+				1618D8D5282FF874009DC3AF /* Main.storyboard */,
+				1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */,
 			);
-			path = Cell;
+			path = View;
+			sourceTree = "<group>";
+		};
+		16247FC3283250E900D885B3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16247FC72832514900D885B3 /* Date */,
+				16247FC62832513D00D885B3 /* Journal */,
+				16247FC82832515C00D885B3 /* History */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		16247FC4283250F100D885B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16247FC92832527100D885B3 /* Schedule.swift */,
+				16247FCB2832843B00D885B3 /* Date+Moton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16247FC5283250FD00D885B3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1618D8CF282FF874009DC3AF /* AppDelegate.swift */,
+				1618D8D1282FF874009DC3AF /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		16247FC62832513D00D885B3 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				4F9EA8F228315E2300CE6920 /* JournalViewController.swift */,
+				ADE680562832264600B734C9 /* JournalListTableViewCell.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		16247FC72832514900D885B3 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				1618D8D3282FF874009DC3AF /* DateViewController.swift */,
+				ADE6805A2832269900B734C9 /* ScheduleListTableViewCell.swift */,
+				ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		16247FC82832515C00D885B3 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */,
+				ADE6805E283226CE00B734C9 /* HistoryListTableViewCell.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,12 +239,14 @@
 			files = (
 				1618D8D4282FF874009DC3AF /* DateViewController.swift in Sources */,
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
+				16247FCA2832527100D885B3 /* Schedule.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
 				4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */,
 				ADE68064283226E700B734C9 /* DateRecommendationTableViewCell.swift in Sources */,
 				ADE68060283226CE00B734C9 /* HistoryListTableViewCell.swift in Sources */,
+				16247FCC2832843B00D885B3 /* Date+Moton.swift in Sources */,
 				ADE6805C2832269900B734C9 /* ScheduleListTableViewCell.swift in Sources */,
 				4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */,
 			);
