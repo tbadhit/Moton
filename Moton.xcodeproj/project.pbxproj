@@ -16,6 +16,14 @@
 		1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */; };
 		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
+		ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE680562832264600B734C9 /* JournalListTableViewCell.swift */; };
+		ADE680592832264600B734C9 /* JournalListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE680572832264600B734C9 /* JournalListTableViewCell.xib */; };
+		ADE6805C2832269900B734C9 /* ScheduleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6805A2832269900B734C9 /* ScheduleListTableViewCell.swift */; };
+		ADE6805D2832269900B734C9 /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE6805B2832269900B734C9 /* ScheduleListTableViewCell.xib */; };
+		ADE68060283226CE00B734C9 /* HistoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6805E283226CE00B734C9 /* HistoryListTableViewCell.swift */; };
+		ADE68061283226CE00B734C9 /* HistoryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE6805F283226CE00B734C9 /* HistoryListTableViewCell.xib */; };
+		ADE68064283226E700B734C9 /* DateRecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */; };
+		ADE68065283226E700B734C9 /* DateRecommendationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		1618D8E0282FF876009DC3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
+		ADE680562832264600B734C9 /* JournalListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListTableViewCell.swift; sourceTree = "<group>"; };
+		ADE680572832264600B734C9 /* JournalListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalListTableViewCell.xib; sourceTree = "<group>"; };
+		ADE6805A2832269900B734C9 /* ScheduleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListTableViewCell.swift; sourceTree = "<group>"; };
+		ADE6805B2832269900B734C9 /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
+		ADE6805E283226CE00B734C9 /* HistoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListTableViewCell.swift; sourceTree = "<group>"; };
+		ADE6805F283226CE00B734C9 /* HistoryListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryListTableViewCell.xib; sourceTree = "<group>"; };
+		ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendationTableViewCell.swift; sourceTree = "<group>"; };
+		ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateRecommendationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 		1618D8CE282FF874009DC3AF /* Moton */ = {
 			isa = PBXGroup;
 			children = (
+				ADE680512832152600B734C9 /* Cell */,
 				1618D8CF282FF874009DC3AF /* AppDelegate.swift */,
 				1618D8D1282FF874009DC3AF /* SceneDelegate.swift */,
 				1618D8D3282FF874009DC3AF /* DateViewController.swift */,
@@ -74,6 +91,21 @@
 				4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */,
 			);
 			path = Moton;
+			sourceTree = "<group>";
+		};
+		ADE680512832152600B734C9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ADE680562832264600B734C9 /* JournalListTableViewCell.swift */,
+				ADE680572832264600B734C9 /* JournalListTableViewCell.xib */,
+				ADE6805A2832269900B734C9 /* ScheduleListTableViewCell.swift */,
+				ADE6805B2832269900B734C9 /* ScheduleListTableViewCell.xib */,
+				ADE6805E283226CE00B734C9 /* HistoryListTableViewCell.swift */,
+				ADE6805F283226CE00B734C9 /* HistoryListTableViewCell.xib */,
+				ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */,
+				ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +166,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADE680592832264600B734C9 /* JournalListTableViewCell.xib in Resources */,
 				1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */,
+				ADE68065283226E700B734C9 /* DateRecommendationTableViewCell.xib in Resources */,
+				ADE68061283226CE00B734C9 /* HistoryListTableViewCell.xib in Resources */,
 				1618D8DC282FF876009DC3AF /* Assets.xcassets in Resources */,
+				ADE6805D2832269900B734C9 /* ScheduleListTableViewCell.xib in Resources */,
 				1618D8D7282FF874009DC3AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,8 +186,12 @@
 				1618D8D4282FF874009DC3AF /* DateViewController.swift in Sources */,
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
+				ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
 				4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */,
+				ADE68064283226E700B734C9 /* DateRecommendationTableViewCell.swift in Sources */,
+				ADE68060283226CE00B734C9 /* HistoryListTableViewCell.swift in Sources */,
+				ADE6805C2832269900B734C9 /* ScheduleListTableViewCell.swift in Sources */,
 				4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
