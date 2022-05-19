@@ -5,11 +5,30 @@
 //  Created by Tubagus Adhitya Permana on 14/05/22.
 import UIKit
 
-class DateViewController: UIViewController, UITableViewDelegate {
+let today = Date()
+let tommorow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+let afterTommorow = Calendar.current.date(byAdding: .day, value: 2, to: today)!
+
+class CalendarHelper {
+  func yearMonthDayString(date: Date) -> String
+  {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+    return dateFormatter.string(from: date)
+  }
+}
+
+class DateViewController: UIViewController {
   
   @IBOutlet weak var scheduleListTable: UITableView!
   
   var scheduleList: [Schedule] = Schedule.sampleData
+  
+  var dateRecommendation: [String] = [
+    CalendarHelper().yearMonthDayString(date: today),
+    CalendarHelper().yearMonthDayString(date: tommorow),
+    CalendarHelper().yearMonthDayString(date: afterTommorow),
+  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -46,20 +65,27 @@ extension DateViewController: UITableViewDataSource {
   
   // To return how many cell display
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return scheduleList.count
+    return dateRecommendation.count
   }
   
   //Cell's Data
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleListCell",for: indexPath) as! ScheduleListTableViewCell
-    let schedule = scheduleList[indexPath.row]
+    let date = dateRecommendation[indexPath.row]
     
-    cell.titleLabel.text = schedule.title
-    cell.dateTimeLabel.text = schedule.startDate.dayAndTimeText // "Wed, 13 April 2022, 20:00 PM - 21:00 PM"
-    cell.notesLabel.text = schedule.note
+    cell.titleLabel.text = date
     
     return cell
   }
   
+}
+
+
+extension DateViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
+    
+    self.navigationController?.pushViewController(detail, animated: true)
+  }
 }
 

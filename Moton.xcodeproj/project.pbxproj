@@ -16,6 +16,9 @@
 		1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */; };
 		16247FCA2832527100D885B3 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FC92832527100D885B3 /* Schedule.swift */; };
 		16247FCC2832843B00D885B3 /* Date+Moton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FCB2832843B00D885B3 /* Date+Moton.swift */; };
+		163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BC66228354E06009CFBD8 /* DateRecommendation.swift */; };
+		163BC66628355AFC009CFBD8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BC66428355AFC009CFBD8 /* DetailViewController.swift */; };
+		169237352835DDA300155545 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169237342835DDA300155545 /* DetailViewController.xib */; };
 		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
 		AD0A8FD32834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A8FD12834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.swift */; };
@@ -45,6 +48,9 @@
 		1618D8E0282FF876009DC3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16247FC92832527100D885B3 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		16247FCB2832843B00D885B3 /* Date+Moton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Moton.swift"; sourceTree = "<group>"; };
+		163BC66228354E06009CFBD8 /* DateRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendation.swift; sourceTree = "<group>"; };
+		163BC66428355AFC009CFBD8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		169237342835DDA300155545 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
 		AD0A8FD12834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventDatePickerTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +130,8 @@
 				16247FC72832514900D885B3 /* Date */,
 				16247FC62832513D00D885B3 /* Journal */,
 				16247FC82832515C00D885B3 /* History */,
+				163BC66428355AFC009CFBD8 /* DetailViewController.swift */,
+				169237342835DDA300155545 /* DetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 			children = (
 				16247FC92832527100D885B3 /* Schedule.swift */,
 				16247FCB2832843B00D885B3 /* Date+Moton.swift */,
+				163BC66228354E06009CFBD8 /* DateRecommendation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 				ADE68061283226CE00B734C9 /* HistoryListTableViewCell.xib in Resources */,
 				1618D8DC282FF876009DC3AF /* Assets.xcassets in Resources */,
 				ADE6805D2832269900B734C9 /* ScheduleListTableViewCell.xib in Resources */,
+				169237352835DDA300155545 /* DetailViewController.xib in Resources */,
 				AD0A8FD42834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.xib in Resources */,
 				1618D8D7282FF874009DC3AF /* Main.storyboard in Resources */,
 			);
@@ -255,11 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1618D8D4282FF874009DC3AF /* DateViewController.swift in Sources */,
+				163BC66628355AFC009CFBD8 /* DetailViewController.swift in Sources */,
 				AD0A8FD32834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.swift in Sources */,
 				AD889E712833F8230021FFAD /* AddEventViewController.swift in Sources */,
 				AD889E74283403D80021FFAD /* AddEventTextFieldTableViewCell.swift in Sources */,
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
 				16247FCA2832527100D885B3 /* Schedule.swift in Sources */,
+				163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
