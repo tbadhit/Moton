@@ -152,6 +152,54 @@
 //    return newEKWrapper
 //}
 
+//fungsi tambahan yang kemarin dioprek-oprek
+//func newEvent(startDate: Date, endDate: Date) -> EKEvent{
+//    let newEKEvent = EKEvent(eventStore: eventStore)
+//    newEKEvent.calendar = eventStore.defaultCalendarForNewEvents
+//    
+//    newEKEvent.startDate = startDate
+//    newEKEvent.endDate = endDate
+//    newEKEvent.title = "DTambah"
 //
+//    let newEKWrapper = EKWrapper(eventKitEvent: newEKEvent)
+//    newEKWrapper.editedEvent = newEKWrapper
+//    print("halo",newEKWrapper)
+////        print(type(of: newEKEvent))
+//    return newEKEvent
+//}
+//
+//func durasi(startDate: Date, endDate: Date) -> Int{
+//    let diffComponents = Calendar.current.dateComponents([.hour], from: startDate, to: endDate)
+//    let hours = diffComponents.hour
+//    return hours!
+//}
+//
+//func tambahEvent(startDate: Date, endDate: Date, title: String){
+//    eventStore.requestAccess(to: .event) { [self] (granted, error) in
+//      
+//      if (granted) && (error == nil) {
+////              print("granted \(granted)")
+////              print("error \(error)")
+////
+//          let event:EKEvent = EKEvent(eventStore: eventStore)
+//          
+//          event.title = title
+//          event.startDate = startDate
+//          event.endDate = endDate
+////              event.notes = "This is a note"
+//          event.calendar = eventStore.defaultCalendarForNewEvents
+//          do {
+//              try eventStore.save(event, span: .thisEvent)
+//          } catch let error as NSError {
+////                  print("failed to save event with error : \(error)")
+//          }
+////              print("Saved Event")
+//      }
+//      else{
+//      
+////              print("failed to save event with error : \(error) or access not granted")
+//      }
+//    }
+//}
 
 //}
