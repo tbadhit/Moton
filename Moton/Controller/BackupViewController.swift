@@ -156,7 +156,7 @@
 //func newEvent(startDate: Date, endDate: Date) -> EKEvent{
 //    let newEKEvent = EKEvent(eventStore: eventStore)
 //    newEKEvent.calendar = eventStore.defaultCalendarForNewEvents
-//    
+//
 //    newEKEvent.startDate = startDate
 //    newEKEvent.endDate = endDate
 //    newEKEvent.title = "DTambah"
@@ -176,13 +176,13 @@
 //
 //func tambahEvent(startDate: Date, endDate: Date, title: String){
 //    eventStore.requestAccess(to: .event) { [self] (granted, error) in
-//      
+//
 //      if (granted) && (error == nil) {
 ////              print("granted \(granted)")
 ////              print("error \(error)")
 ////
 //          let event:EKEvent = EKEvent(eventStore: eventStore)
-//          
+//
 //          event.title = title
 //          event.startDate = startDate
 //          event.endDate = endDate
@@ -196,10 +196,64 @@
 ////              print("Saved Event")
 //      }
 //      else{
-//      
+//
 ////              print("failed to save event with error : \(error) or access not granted")
 //      }
 //    }
 //}
 
+//Fungsi bawaan lainnya
+//override func dayViewDidLongPressEventView(_ eventView: EventView) {
+//    guard let descriptor = eventView.descriptor as? EKWrapper else {
+//        return
+//    }
+//    endEventEditing()
+//    beginEditing(event: descriptor,
+//                 animated: true)
+//}
+//
+//override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {
+//    guard let editingEvent = event as? EKWrapper else { return }
+//    if let originalEvent = event.editedEvent {
+//        editingEvent.commitEditing()
+//
+//        if originalEvent === editingEvent {
+//            // If editing event is the same as the original one, it has just been created.
+//            // Showing editing view controller
+//            presentEditingViewForEvent(editingEvent.ekEvent)
+//        } else {
+//            // If editing event is different from the original,
+//            // then it's pointing to the event already in the `eventStore`
+//            // Let's save changes to oriignal event to the `eventStore`
+//            try! eventStore.save(editingEvent.ekEvent,
+//                                 span: .thisEvent)
+//        }
+//    }
+//    reloadData()
+//}
+//
+//
+//private func presentEditingViewForEvent(_ ekEvent: EKEvent) {
+//    let eventEditViewController = EKEventEditViewController()
+//    eventEditViewController.event = ekEvent
+//    eventEditViewController.eventStore = eventStore
+//    eventEditViewController.editViewDelegate = self
+//    present(eventEditViewController, animated: true, completion: nil)
+//}
+//
+//override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
+//    endEventEditing()
+//}
+//
+//override func dayViewDidBeginDragging(dayView: DayView) {
+//    endEventEditing()
+//}
+//
+//// MARK: - EKEventEditViewDelegate
+//
+//func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+//    endEventEditing()
+//    reloadData()
+//    controller.dismiss(animated: true, completion: nil)
+//}
 //}
