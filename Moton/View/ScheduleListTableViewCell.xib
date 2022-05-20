@@ -16,14 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today, 13 May 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFW-m8-4De">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFW-m8-4De">
                         <rect key="frame" x="16" y="31" width="288" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="oFW-m8-4De" secondAttribute="trailing" constant="16" id="5Cw-Q7-ZAJ"/>
+                    <constraint firstItem="oFW-m8-4De" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="bUk-1F-efd"/>
+                    <constraint firstItem="oFW-m8-4De" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="klH-WJ-kvR"/>
+                    <constraint firstAttribute="bottom" secondItem="oFW-m8-4De" secondAttribute="bottom" constant="32" id="lUz-hA-kUw"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

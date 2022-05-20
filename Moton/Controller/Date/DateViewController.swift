@@ -7,8 +7,9 @@ import UIKit
 
 class DateViewController: UIViewController {
   
-  @IBOutlet weak var scheduleListTable: UITableView!
   
+  
+  @IBOutlet weak var dateRecomTableView: UITableView!
   var scheduleList: [Schedule] = Schedule.sampleData
   
   var dateRecommendation: [Date] = []
@@ -16,8 +17,8 @@ class DateViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpTable()
-    scheduleListTable.delegate = self
-    scheduleListTable.dataSource = self
+    dateRecomTableView.delegate = self
+    dateRecomTableView.dataSource = self
     initDateRecommendation()
   }
   
@@ -27,7 +28,11 @@ class DateViewController: UIViewController {
     dateRecommendation = [
       getDateRecommendation(date: today, addDay: 0),
       getDateRecommendation(date: today, addDay: 1),
-      getDateRecommendation(date: today, addDay: 2)
+      getDateRecommendation(date: today, addDay: 2),
+      getDateRecommendation(date: today, addDay: 3),
+      getDateRecommendation(date: today, addDay: 4),
+      getDateRecommendation(date: today, addDay: 5),
+      getDateRecommendation(date: today, addDay: 6)
     ]
   }
   
@@ -46,14 +51,14 @@ class DateViewController: UIViewController {
   
   //Untuk SetUp Table dengan Cell-nya
   func setUpTable () {
-    // Cell Schedule List
-    let nibScheduleList = UINib(nibName: "ScheduleListTableViewCell", bundle: nil)
+    //    // Cell Schedule List
+    //    let nibScheduleList = UINib(nibName: "ScheduleListTableViewCell", bundle: nil)
     
     // Cell Date Recommendation
-    // let nibDateRecommendation = UINib(nibName: "DateRecommendationTableViewCell", bundle: nil)
+    let nibDateRecommendation = UINib(nibName: "DateTableViewCell", bundle: nil)
     
     // Set Table Schedule List ke Cell-nya
-    scheduleListTable.register(nibScheduleList, forCellReuseIdentifier: "scheduleListCell")
+    dateRecomTableView.register(nibDateRecommendation, forCellReuseIdentifier: "DateCell")
     
     // MARK: Lanjut ke Table / Collection Date Recommendation
   }
@@ -68,7 +73,6 @@ class DateViewController: UIViewController {
 
 
 extension DateViewController: UITableViewDataSource {
-  
   // To return how many cell display
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return dateRecommendation.count
@@ -76,14 +80,13 @@ extension DateViewController: UITableViewDataSource {
   
   //Cell's Data
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleListCell",for: indexPath) as! ScheduleListTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell",for: indexPath) as! DateTableViewCell
     let date = dateRecommendation[indexPath.row]
     
-    cell.titleLabel.text = yearMonthDayString(date: date)
+    cell.timeLabel.text = yearMonthDayString(date: date)
     
     return cell
   }
-  
 }
 
 
@@ -92,7 +95,7 @@ extension DateViewController: UITableViewDelegate {
     let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
     
     detail.date = dateRecommendation[indexPath.row]
-        
+    
     detail.hidesBottomBarWhenPushed = true
     self.navigationController?.pushViewController(detail, animated: true)
   }
