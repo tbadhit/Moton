@@ -257,3 +257,20 @@
 //    controller.dismiss(animated: true, completion: nil)
 //}
 //}
+
+//extension tambahan
+//Note 3: untuk TB. Yang ini B belum fixed timezone
+//extension Date {
+//    public func setTime(hour: Int, min: Int, sec: Int, timeZoneAbbrev: String = "GMT") -> Date? {
+//        let x: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
+//        let cal = Calendar.current
+//        var components = cal.dateComponents(x, from: self)
+//
+//        components.timeZone = TimeZone(abbreviation: timeZoneAbbrev)
+//        components.hour = hour
+//        components.minute = min
+//        components.second = sec
+//
+//        return cal.date(from: components)
+//    }
+//}
