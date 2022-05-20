@@ -92,12 +92,17 @@ extension DateViewController: UITableViewDataSource {
 
 extension DateViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
+    //let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
+      let detail = FormAddEventViewController()
     
-    detail.date = dateRecommendation[indexPath.row]
+    //detail.date = dateRecommendation[indexPath.row]
     
-    detail.hidesBottomBarWhenPushed = true
-    self.navigationController?.pushViewController(detail, animated: true)
+    //detail.hidesBottomBarWhenPushed = true
+    //self.navigationController?.pushViewController(detail, animated: true)
+      //self.navigationController?.present(detail, animated: true)
+      //self.present(detail, animated: true)
+      //self.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+      performSegue(withIdentifier: "formSegue", sender: nil)
   }
 }
 
