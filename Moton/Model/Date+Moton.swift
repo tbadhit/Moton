@@ -27,4 +27,31 @@ extension Date {
       return formatted(.dateTime.month().day().weekday(.wide))
     }
   }
+  
+  func formatDate() {
+    let dateFormatter = DateFormatter()
+    dateFormatter.date(from: "h:mm a")
+    
+    
+  }
+  
+  static func time(date: Date) -> String
+  {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "h:mm a"
+    return dateFormatter.string(from: date) // MM-dd-yyyy
+  }
+  
+  static func dateHours(from fromDate: Date, to toDate: Date) -> [Date] {
+    var dates: [Date] = []
+    var date = fromDate
+    
+    while date <= toDate {
+      dates.append(date)
+      guard let newDate = Calendar.current.date(byAdding: .hour, value: 1, to: date) else {break}
+      date = newDate
+    }
+    
+    return dates
+  }
 }

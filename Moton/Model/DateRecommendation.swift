@@ -8,18 +8,34 @@
 import Foundation
 
 struct DateRecommendation {
-  var startDate: String // ISO
-  var endDate: String
+  var date: Date?
+  var startTime: Date
+  var endTime: Date
+  var duration: Int
   
-  static var sampleData = [
-    DateRecommendation(startDate: "08:00", endDate: "10:00"),
-    DateRecommendation(startDate: "10:00", endDate: "12:00"),
-    DateRecommendation(startDate: "12:00", endDate: "14:00"),
-    DateRecommendation(startDate: "14:00", endDate: "16:00"),
-    DateRecommendation(startDate: "16:00", endDate: "18:00"),
-    DateRecommendation(startDate: "18:00", endDate: "20:00"),
-    DateRecommendation(startDate: "20:00", endDate: "22:00"),
+  static var sampleData: [DateRecommendation] = [
+//    DateRecommendation(date: Today, startTime: 08:00, endTime: 10:00, duration: 2)
   ]
+  
+  static func durasi(startTime: Date, endTime: Date) -> Int{
+//          let fmt = ISO8601DateFormatter()
+//          let startDate = fmt.date(from: startTime)!
+//          let endDate = fmt.date(from: endTime)!
+
+          let diffComponents = Calendar.current.dateComponents([.hour], from: startTime, to: endTime)
+          let hours = diffComponents.hour
+          return hours!
+      }
+  
+  static func formatDateToTime(time: String) -> Date {
+    let formater = DateFormatter()
+    formater.timeStyle = .short
+    formater.dateStyle = .none
+//    let tamp = formater.string(from: datePicker.date)
+//    field.text = tamp
+    let iniDate = formater.date(from: time)
+    return iniDate!
+  }
 }
 
 

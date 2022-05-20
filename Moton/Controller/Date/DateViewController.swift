@@ -5,37 +5,43 @@
 //  Created by Tubagus Adhitya Permana on 14/05/22.
 import UIKit
 
-let today = Date()
-let tommorow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
-let afterTommorow = Calendar.current.date(byAdding: .day, value: 2, to: today)!
-
-class CalendarHelper {
-  func yearMonthDayString(date: Date) -> String
-  {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
-    return dateFormatter.string(from: date)
-  }
-}
-
 class DateViewController: UIViewController {
   
   @IBOutlet weak var scheduleListTable: UITableView!
   
   var scheduleList: [Schedule] = Schedule.sampleData
   
-  var dateRecommendation: [String] = [
-    CalendarHelper().yearMonthDayString(date: today),
-    CalendarHelper().yearMonthDayString(date: tommorow),
-    CalendarHelper().yearMonthDayString(date: afterTommorow),
-  ]
+  var dateRecommendation: [Date] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpTable()
     scheduleListTable.delegate = self
     scheduleListTable.dataSource = self
+    initDateRecommendation()
+  }
+  
+  func initDateRecommendation() {
+    let today = Date()
     
+    dateRecommendation = [
+      getDateRecommendation(date: today, addDay: 0),
+      getDateRecommendation(date: today, addDay: 1),
+      getDateRecommendation(date: today, addDay: 2)
+    ]
+  }
+  
+  func getDateRecommendation(date: Date, addDay: Int) -> Date {
+    let date = Calendar.current.date(byAdding: .day, value: addDay, to: Date())
+    
+    return date!
+  }
+  
+  func yearMonthDayString(date: Date) -> String
+  {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+    return dateFormatter.string(from: date) // MM-dd-yyyy
   }
   
   //Untuk SetUp Table dengan Cell-nya
@@ -73,7 +79,7 @@ extension DateViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleListCell",for: indexPath) as! ScheduleListTableViewCell
     let date = dateRecommendation[indexPath.row]
     
-    cell.titleLabel.text = date
+    cell.titleLabel.text = yearMonthDayString(date: date)
     
     return cell
   }
@@ -85,6 +91,9 @@ extension DateViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
     
+    detail.date = dateRecommendation[indexPath.row]
+        
+    detail.hidesBottomBarWhenPushed = true
     self.navigationController?.pushViewController(detail, animated: true)
   }
 }
