@@ -19,6 +19,7 @@
 		163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BC66228354E06009CFBD8 /* DateRecommendation.swift */; };
 		163BC66628355AFC009CFBD8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BC66428355AFC009CFBD8 /* DetailViewController.swift */; };
 		169237352835DDA300155545 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169237342835DDA300155545 /* DetailViewController.xib */; };
+		4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */; };
 		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
 		AD0A8FD32834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A8FD12834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.swift */; };
@@ -51,6 +52,7 @@
 		163BC66228354E06009CFBD8 /* DateRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendation.swift; sourceTree = "<group>"; };
 		163BC66428355AFC009CFBD8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		169237342835DDA300155545 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
 		AD0A8FD12834DD4200F5A1E0 /* AddEventDatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventDatePickerTableViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				16247FC82832515C00D885B3 /* History */,
 				163BC66428355AFC009CFBD8 /* DetailViewController.swift */,
 				169237342835DDA300155545 /* DetailViewController.xib */,
+				4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
 				16247FCA2832527100D885B3 /* Schedule.swift in Sources */,
 				163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */,
+				4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
