@@ -8,7 +8,6 @@ import UIKit
 class DateViewController: UIViewController {
   
   @IBOutlet weak var dateRecomTableView: UITableView!
-  var scheduleList: [Schedule] = Schedule.sampleData
   
   var dateRecommendation: [Date] = []
   var selectedDate: Date?

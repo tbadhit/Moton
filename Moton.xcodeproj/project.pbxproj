@@ -201,8 +201,8 @@
 		16BF2D3F283897F70012CA7C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */,
 				16BF2D3C283881640012CA7C /* DetailViewController.swift */,
+				ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";

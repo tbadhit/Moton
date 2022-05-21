@@ -23,13 +23,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-ku-3c5">
-                        <rect key="frame" x="16" y="34" width="288" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day-Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHP-uG-DGR">
                         <rect key="frame" x="16" y="63" width="288" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,13 +30,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-ku-3c5">
+                        <rect key="frame" x="16" y="39" width="288" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dayDateLabel" destination="zHP-uG-DGR" id="RQA-Gc-xdc"/>
-                <outlet property="noteLabel" destination="xjL-ku-3c5" id="cKy-kP-zJ6"/>
-                <outlet property="titleLabel" destination="oQF-bb-iLh" id="oeC-cV-nw7"/>
+                <outlet property="dateDurationUpComming" destination="zHP-uG-DGR" id="rGe-6f-qGp"/>
+                <outlet property="noteUpComming" destination="xjL-ku-3c5" id="7lz-7h-KP8"/>
+                <outlet property="titleUpComming" destination="oQF-bb-iLh" id="ncz-WI-TPH"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
         </tableViewCell>

@@ -11,7 +11,7 @@ class WatchHistoryViewController: UIViewController, UITableViewDelegate {
   
   @IBOutlet weak var historyListTable: UITableView!
   
-  let historyList: [Schedule] = Schedule.sampleData
+  let historyList: [Schedule] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -8,12 +8,11 @@
 import UIKit
 
 class UpCommingTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var noteLabel: UILabel!
-    @IBOutlet weak var dayDateLabel: UILabel!
     
-    override func awakeFromNib() {
+  @IBOutlet weak var titleUpComming: UILabel!
+  @IBOutlet weak var noteUpComming: UILabel!
+  @IBOutlet weak var dateDurationUpComming: UILabel!
+  override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

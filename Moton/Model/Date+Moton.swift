@@ -28,18 +28,28 @@ extension Date {
     }
   }
   
-  func formatDate() {
+  var monthDayTimeText: String {
     let dateFormatter = DateFormatter()
-    dateFormatter.date(from: "h:mm a")
-    
-    
+    dateFormatter.dateFormat = "E, MMM d, h:mm a"
+    return dateFormatter.string(from: self) // MM-dd-yyyy
   }
   
-  static func time(date: Date) -> String
-  {
+  var yearMonthDayText: String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+    return dateFormatter.string(from: self) // MM-dd-yyyy
+  }
+  
+  var yearMonthDayTimeText: String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMM d, yyyy, h:mm a"
+    return dateFormatter.string(from: self) // MM-dd-yyyy
+  }
+  
+  var time: String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "h:mm a"
-    return dateFormatter.string(from: date) // MM-dd-yyyy
+    return dateFormatter.string(from: self)
   }
   
   static func dateHours(from fromDate: Date, to toDate: Date) -> [Date] {

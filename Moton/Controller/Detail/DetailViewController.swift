@@ -78,10 +78,11 @@ class DetailViewController: UIViewController {
         
         if event == eventKitEvents.first {
           if hour > 8 {
+            print(hour)
             let startFreeTimeUnder = startDate
-            let endFreeTimeUnder = eventKitEvents[0].startDate
+            let endFreeTimeUnder = eventKitEvents.first?.startDate
             
-            let startFreeTimeAfter = eventKitEvents[0].endDate
+            let startFreeTimeAfter = eventKitEvents.first?.endDate
             let endFreeTimeAfter = endDate
             
             if eventKitEvents.count == 1 {
@@ -92,6 +93,11 @@ class DetailViewController: UIViewController {
               }
               if durationAbove >= 2 {
                 dateRecomList.append(DateRecommendation(date: date, startTime: startFreeTimeAfter!, endTime: endFreeTimeAfter, duration: durationAbove))
+              }
+            } else {
+              let duration = getDuration(startDate: startFreeTimeUnder, endDate: endFreeTimeUnder!)
+              if duration >= 2 {
+                dateRecomList.append(DateRecommendation(date: date, startTime: startFreeTimeUnder, endTime: endFreeTimeUnder!, duration: duration))
               }
             }
           } else if hour == 8 {
@@ -224,7 +230,7 @@ extension DetailViewController: UITableViewDataSource {
     let dateItem = dateRecomList[indexPath.row]
     
     cell.dateLabel.text = "\(dateItem.duration)"
-    cell.timeLabel.text = "\(Date.time(date: dateItem.startTime)) - \(Date.time(date: dateItem.endTime))"
+    cell.timeLabel.text = "\(dateItem.startTime.time) - \(dateItem.endTime.time)"
     
     return cell
   }

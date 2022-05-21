@@ -11,7 +11,7 @@ class JournalViewController: UIViewController, UITableViewDelegate {
   
   @IBOutlet weak var journalListTable: UITableView!
   
-  let journalList: [Schedule] = Schedule.sampleData
+  let journalList: [Schedule] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
