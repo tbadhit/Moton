@@ -50,6 +50,7 @@ class FormAddEventViewController: UITableViewController {
         print("Saved event")
       }
     }
+    self.dismiss(animated: true, completion: nil)
   }
   
 //  eventStore.requestAccess(to: .event) { [self] (granted, error) in
