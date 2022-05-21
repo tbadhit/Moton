@@ -21,18 +21,22 @@ class DetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
     self.navigationItem.title = date?.dayAndTimeText
     dateRecommendationTableView.dataSource = self
     dateRecommendationTableView.delegate = self
-    
-    //    dateRecommendationTableView.delegate = self
     
     dateRecommendationTableView.register(UINib(nibName: "DateRecommendationTableViewCell", bundle: nil), forCellReuseIdentifier: dateRecommendationTableViewCellId)
     
     initDateRecom()
     
   }
+  
+  func reloadData() {
+    dateRecomList.removeAll()
+    initDateRecom()
+    self.dateRecommendationTableView.reloadData()
+  }
+  
   
   func initDateRecom() {
     var calendar = Calendar(identifier: .gregorian)
@@ -216,6 +220,10 @@ class DetailViewController: UIViewController {
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 90.0
   }
+  
+  override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+    self.dateRecommendationTableView.reloadData()
+  }
 
 }
 
@@ -241,7 +249,6 @@ extension DetailViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     selectedDateRecommendation = dateRecomList[indexPath.row]
-    
     performSegue(withIdentifier: "showForm", sender: selectedDateRecommendation)
   }
   
@@ -250,6 +257,12 @@ extension DetailViewController: UITableViewDelegate {
         let controller = segue.destination as! UINavigationController
         let controllerTableView = controller.topViewController as! FormAddEventViewController
         controllerTableView.dateRecommendation = selectedDateRecommendation
+        controllerTableView.reloadData = {
+//          DispatchQueue.main.async {
+//            self.reloadData()
+//          }
+          self.reloadData()
+        }
     }
   }
   

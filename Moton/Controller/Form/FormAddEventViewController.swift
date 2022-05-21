@@ -11,6 +11,7 @@ import EventKit
 class FormAddEventViewController: UITableViewController {
   
   var dateRecommendation: DateRecommendation?
+  var reloadData: (() -> Void)?
   
   @IBOutlet weak var titleField: UITextField!
   @IBOutlet weak var notesField: UITextField!
@@ -54,5 +55,9 @@ class FormAddEventViewController: UITableViewController {
       }
     }
     self.dismiss(animated: true, completion: nil)
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    reloadData?()
   }
 }
