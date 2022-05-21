@@ -28,6 +28,7 @@
 		4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */; };
 		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
+		ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */; };
 		ADCFDA332837EF61008DE69B /* FormAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */; };
 		ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE680562832264600B734C9 /* JournalListTableViewCell.swift */; };
 		ADE680592832264600B734C9 /* JournalListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE680572832264600B734C9 /* JournalListTableViewCell.xib */; };
@@ -59,6 +60,7 @@
 		4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
+		ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewatchDatePickerViewController.swift; sourceTree = "<group>"; };
 		ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAddEventViewController.swift; sourceTree = "<group>"; };
 		ADE680562832264600B734C9 /* JournalListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListTableViewCell.swift; sourceTree = "<group>"; };
 		ADE680572832264600B734C9 /* JournalListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalListTableViewCell.xib; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */,
+				ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
 				16247FCA2832527100D885B3 /* Schedule.swift in Sources */,
 				163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */,
+				ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */,
 				16BF2D432838A51D0012CA7C /* ScheduleTableViewCell.swift in Sources */,
 				4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */,
 				16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */,

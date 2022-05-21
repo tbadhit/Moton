@@ -11,6 +11,7 @@ import EventKit
 class FormAddEventViewController: UITableViewController {
   
   var dateRecommendation: DateRecommendation?
+  var movieTitle : String?
   
   @IBOutlet weak var titleField: UITextField!
   @IBOutlet weak var notesField: UITextField!
@@ -22,7 +23,7 @@ class FormAddEventViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    titleField.text = ""
+    titleField.text = movieTitle ?? ""
     
     startTimePicker.date = dateRecommendation!.startTime
     endTimePicker.date = dateRecommendation!.endTime

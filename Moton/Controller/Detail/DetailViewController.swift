@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
   var dateRecomList : [DateRecommendation] = []
   let eventStore = EKEventStore()
   var selectedDateRecommendation: DateRecommendation?
+  var movieTitle : String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,7 +32,8 @@ class DetailViewController: UIViewController {
     dateRecommendationTableView.register(UINib(nibName: "DateRecommendationTableViewCell", bundle: nil), forCellReuseIdentifier: dateRecommendationTableViewCellId)
     
     initDateRecom()
-    
+
+      
   }
   
   func initDateRecom() {
@@ -250,6 +252,7 @@ extension DetailViewController: UITableViewDelegate {
         let controller = segue.destination as! UINavigationController
         let controllerTableView = controller.topViewController as! FormAddEventViewController
         controllerTableView.dateRecommendation = selectedDateRecommendation
+        controllerTableView.movieTitle = movieTitle
     }
   }
   
