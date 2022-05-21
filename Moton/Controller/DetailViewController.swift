@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
     let endOfDate = Calendar.current.date(byAdding: .day, value: 1, to: startOfDate) // 2022-05-20 00:00:00 +0000
     
     let dateHourArray = Date.dateHours(from: startOfDate, to: endOfDate!)
-    print(dateHourArray)
+//    print(dateHourArray)
     
     //    for hour in dateHourArray {
     //      let startDate = hour
@@ -57,7 +57,7 @@ class DetailViewController: UIViewController {
     
     let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
     let eventKitEvents = eventStore.events(matching: predicate)
-    print("Data Event : \(eventKitEvents)")
+//    print("Data Event : \(eventKitEvents)")
     
     if eventKitEvents.isEmpty {
       let duration = getDuration(startDate: startDate, endDate: endDate)
@@ -156,23 +156,22 @@ class DetailViewController: UIViewController {
             }
           }
         } else if event == eventKitEvents.last {
-          if hour <= 10 {
-            let startFreeTime: Date?// eventKitEvents[index - 1].endDate
-            let endFreeTime: Date = event.startDate
-            if eventKitEvents.count == 1 {
-              startFreeTime = startDate
-            } else {
-              startFreeTime = eventKitEvents[index - 1].endDate
-            }
-            let duration = getDuration(startDate: startFreeTime!, endDate: endFreeTime)
-            if duration >= 2 {
-              dateRecomList.append(DateRecommendation(date: date, startTime: startFreeTime!, endTime: endFreeTime, duration: duration))
-            }
-          }
-          
-          let end = eventKitEvents.first?.endDate
+          let startLastHour = eventKitEvents.last?.startDate
+          let startHour = Calendar.current.component(.hour, from: startLastHour!)
+          let end = eventKitEvents.last?.endDate
           let endHour = Calendar.current.component(.hour, from: end!)
-          if endHour < 10 {
+         
+          if startHour <= 22 {
+            
+            let startFreeTime: Date = (eventKitEvents.last?.endDate)!// eventKitEvents[index - 1].endDate
+            let endFreeTime: Date = endDate
+            
+            let duration = getDuration(startDate: startFreeTime, endDate: endFreeTime)
+            if duration >= 2 {
+              dateRecomList.append(DateRecommendation(date: date, startTime: startFreeTime, endTime: endFreeTime, duration: duration))
+            }
+          } else if endHour < 22 {
+
             let startFreeTime = event.endDate
             let endFreeTime = endDate
             let duration = getDuration(startDate: startFreeTime!, endDate: endFreeTime)
@@ -180,6 +179,9 @@ class DetailViewController: UIViewController {
               dateRecomList.append(DateRecommendation(date: date, startTime: startFreeTime!, endTime: endFreeTime, duration: duration))
             }
           }
+          
+          
+          
         }
       }
       

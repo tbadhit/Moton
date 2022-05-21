@@ -154,6 +154,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="endTimePicker" destination="Sjw-nO-0j1" id="jlm-E4-iJQ"/>
+                        <outlet property="notesField" destination="jTh-5b-mir" id="N4O-jE-s4k"/>
+                        <outlet property="startTimePicker" destination="fxF-I3-OXY" id="aPm-oU-Fif"/>
+                        <outlet property="titleField" destination="Rpc-ad-X4w" id="0ao-2W-ced"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ym4-1v-cqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
