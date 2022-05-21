@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScheduleViewController: UIViewController {
+class SummaryViewController: UIViewController {
   
   @IBOutlet weak var titleSchedule: UILabel!
   @IBOutlet weak var notesSchedule: UILabel!

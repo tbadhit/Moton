@@ -17,10 +17,13 @@
 		16247FCA2832527100D885B3 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FC92832527100D885B3 /* Schedule.swift */; };
 		16247FCC2832843B00D885B3 /* Date+Moton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FCB2832843B00D885B3 /* Date+Moton.swift */; };
 		163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BC66228354E06009CFBD8 /* DateRecommendation.swift */; };
-		16BF2D342837CE240012CA7C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D332837CE240012CA7C /* ScheduleViewController.swift */; };
+		16BF2D342837CE240012CA7C /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D332837CE240012CA7C /* SummaryViewController.swift */; };
 		16BF2D372837D0D40012CA7C /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D352837D0D40012CA7C /* DateTableViewCell.swift */; };
 		16BF2D382837D0D40012CA7C /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BF2D362837D0D40012CA7C /* DateTableViewCell.xib */; };
 		16BF2D3D283881640012CA7C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D3C283881640012CA7C /* DetailViewController.swift */; };
+		16BF2D432838A51D0012CA7C /* UpCommingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D412838A51D0012CA7C /* UpCommingTableViewCell.swift */; };
+		16BF2D442838A51D0012CA7C /* UpCommingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BF2D422838A51D0012CA7C /* UpCommingTableViewCell.xib */; };
+		16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */; };
 		4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */; };
 		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
@@ -48,10 +51,13 @@
 		16247FC92832527100D885B3 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		16247FCB2832843B00D885B3 /* Date+Moton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Moton.swift"; sourceTree = "<group>"; };
 		163BC66228354E06009CFBD8 /* DateRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendation.swift; sourceTree = "<group>"; };
-		16BF2D332837CE240012CA7C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		16BF2D332837CE240012CA7C /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		16BF2D352837D0D40012CA7C /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		16BF2D362837D0D40012CA7C /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
 		16BF2D3C283881640012CA7C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		16BF2D412838A51D0012CA7C /* UpCommingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingTableViewCell.swift; sourceTree = "<group>"; };
+		16BF2D422838A51D0012CA7C /* UpCommingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpCommingTableViewCell.xib; sourceTree = "<group>"; };
+		16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingViewController.swift; sourceTree = "<group>"; };
 		4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 		16247FC2283250E000D885B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				16BF2D422838A51D0012CA7C /* UpCommingTableViewCell.xib */,
 				16BF2D362837D0D40012CA7C /* DateTableViewCell.xib */,
 				ADE680572832264600B734C9 /* JournalListTableViewCell.xib */,
 				ADE6805B2832269900B734C9 /* ScheduleListTableViewCell.xib */,
@@ -124,7 +131,8 @@
 		16247FC3283250E900D885B3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */,
+				16BF2D472838A5650012CA7C /* Form */,
+				16BF2D402838A4EB0012CA7C /* UpComming */,
 				16BF2D3F283897F70012CA7C /* Detail */,
 				16247FC72832514900D885B3 /* Date */,
 				16247FC62832513D00D885B3 /* Journal */,
@@ -167,7 +175,7 @@
 			children = (
 				16BF2D3E283892A50012CA7C /* Cell */,
 				1618D8D3282FF874009DC3AF /* DateViewController.swift */,
-				16BF2D332837CE240012CA7C /* ScheduleViewController.swift */,
+				16BF2D332837CE240012CA7C /* SummaryViewController.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -197,6 +205,23 @@
 				16BF2D3C283881640012CA7C /* DetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		16BF2D402838A4EB0012CA7C /* UpComming */ = {
+			isa = PBXGroup;
+			children = (
+				16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */,
+				16BF2D412838A51D0012CA7C /* UpCommingTableViewCell.swift */,
+			);
+			path = UpComming;
+			sourceTree = "<group>";
+		};
+		16BF2D472838A5650012CA7C /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BF2D442838A51D0012CA7C /* UpCommingTableViewCell.xib in Resources */,
 				16BF2D382837D0D40012CA7C /* DateTableViewCell.xib in Resources */,
 				ADE680592832264600B734C9 /* JournalListTableViewCell.xib in Resources */,
 				1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */,
@@ -279,10 +305,12 @@
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
 				16247FCA2832527100D885B3 /* Schedule.swift in Sources */,
 				163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */,
+				16BF2D432838A51D0012CA7C /* UpCommingTableViewCell.swift in Sources */,
 				4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */,
+				16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */,
-				16BF2D342837CE240012CA7C /* ScheduleViewController.swift in Sources */,
+				16BF2D342837CE240012CA7C /* SummaryViewController.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
 				16BF2D3D283881640012CA7C /* DetailViewController.swift in Sources */,
 				ADCFDA332837EF61008DE69B /* FormAddEventViewController.swift in Sources */,

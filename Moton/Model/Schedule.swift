@@ -14,7 +14,6 @@ struct Schedule {
   var endDate: Date?
   var journal: String?
   var note: String
-  
 }
 
 #if DEBUG
