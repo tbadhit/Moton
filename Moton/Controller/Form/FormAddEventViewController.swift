@@ -26,7 +26,10 @@ class FormAddEventViewController: UITableViewController {
     
     startTimePicker.date = dateRecommendation!.startTime
     endTimePicker.date = dateRecommendation!.endTime
-
+      startTimePicker.minimumDate = dateRecommendation!.startTime
+      startTimePicker.maximumDate = dateRecommendation!.endTime
+      endTimePicker.minimumDate = dateRecommendation!.startTime
+      endTimePicker.maximumDate = dateRecommendation!.endTime
         // Do any additional setup after loading the view.
     }
     
