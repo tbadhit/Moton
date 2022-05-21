@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
     
     //    dateRecommendationTableView.delegate = self
     
-    dateRecommendationTableView.register(UINib(nibName: "DateRecommendationTableViewCell", bundle: nil), forCellReuseIdentifier: "DateRecommendationCell")
+    dateRecommendationTableView.register(UINib(nibName: "DateRecommendationTableViewCell", bundle: nil), forCellReuseIdentifier: dateRecommendationTableViewCellId)
     
     initDateRecom()
     
@@ -60,6 +60,7 @@ class DetailViewController: UIViewController {
     let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
     let eventKitEvents = eventStore.events(matching: predicate)
     print(eventKitEvents)
+    
     
     if eventKitEvents.isEmpty {
       let duration = getDuration(startDate: startDate, endDate: endDate)
@@ -226,7 +227,7 @@ extension DetailViewController: UITableViewDataSource {
   
   //Cell's Data
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "DateRecommendationCell",for: indexPath) as! DateRecommendationTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: dateRecommendationTableViewCellId,for: indexPath) as! DateRecommendationTableViewCell
     let dateItem = dateRecomList[indexPath.row]
     
     cell.dateLabel.text = "\(dateItem.duration)"

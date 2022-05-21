@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import EventKit
 
 class WatchHistoryViewController: UIViewController, UITableViewDelegate {
   
   @IBOutlet weak var historyListTable: UITableView!
   
-  let historyList: [Schedule] = []
+  let eventStore = EKEventStore()
+  
+  var historyList: [Schedule] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,42 +22,62 @@ class WatchHistoryViewController: UIViewController, UITableViewDelegate {
     setUpTable()
     historyListTable.delegate = self
     historyListTable.dataSource = self
+    initDateRecom()
   }
   
-  //Untuk SetUp Table dengan Cell-nya
-  func setUpTable() {
-    //Cell History List
-    let nibScheduleList = UINib(nibName: "HistoryListTableViewCell", bundle: nil)
+  func initDateRecom() {
+    var calendar = Calendar(identifier: .gregorian)
+    var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
+    calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+    calendar.timeZone = TimeZone(abbreviation: localTimeZoneAbbreviation)!
+    let today = calendar.startOfDay(for: Date())
     
-    //Set Table History List ke Cell-nya
-    historyListTable.register(nibScheduleList, forCellReuseIdentifier: "historyListCell")
+    let startDate = setDate(date: today, addDay: -6)
+    let endDate = setDate(date: today, addDay: 0)
+    
+    let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
+    let eventKitEvents = eventStore.events(matching: predicate).filter({ event in
+      event.title.hasPrefix("Moton")
+    }).filter { event in
+      event.startDate < Date.now
+    }
+    for event in eventKitEvents {
+      historyList.append(Schedule(title: event.title, startDate: event.startDate, endDate: event.endDate, note: event.notes ?? "Note Empty"))
+      print(type(of: event.alarms?[1].relativeOffset))
+    }
+    print(eventKitEvents)
   }
   
+  func setDate(date: Date, addDay: Int) -> Date {
+    let date = Calendar.current.date(byAdding: .day, value: addDay, to: Date())
+    
+    return date!
+  }
   
-  //MARK: Table View Function
+  func setUpTable() {
+    let nibScheduleList = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
+    
+    historyListTable.register(nibScheduleList, forCellReuseIdentifier: scheduleTableViewCellId)
+  }
   
-  //Set ukuran height cell
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 50.0
+    return 90
   }
-  
-  
 }
 
 extension WatchHistoryViewController: UITableViewDataSource {
-  // To return how many cell display
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return historyList.count
   }
   
-  //Cell's Data
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let history = historyList[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: "historyListCell",for: indexPath) as! HistoryListTableViewCell
+    let upComming = historyList[indexPath.row]
+    let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellId,for: indexPath) as! ScheduleTableViewCell
     
-    cell.titleLabel.text = history.title
-    cell.dateLabel.text =  history.startDate.dayText //"Wed, april 20"
-    cell.timeLabel.text = "09:00 PM - 11:00PM"
+    cell.titleUpComming.text = upComming.title
+    cell.noteUpComming.text =  upComming.note
+    cell.dateDurationUpComming.text = "\(upComming.startDate.monthDayTimeText) - \(upComming.endDate.time)"
     
     return cell
   }

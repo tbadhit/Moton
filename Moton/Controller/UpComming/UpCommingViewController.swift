@@ -51,9 +51,8 @@ class UpCommingViewController: UIViewController, UITableViewDelegate {
   }
   
   func setUpTable () {
-    let nibDateRecommendation = UINib(nibName: "UpCommingTableViewCell", bundle: nil)
-    upCommingtableView.register(nibDateRecommendation, forCellReuseIdentifier: "upComming")
-    
+    let nibDateRecommendation = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
+    upCommingtableView.register(nibDateRecommendation, forCellReuseIdentifier: scheduleTableViewCellId)
   }
   
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -68,7 +67,7 @@ extension UpCommingViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let upComming = upCommingList[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: "upComming",for: indexPath) as! UpCommingTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellId,for: indexPath) as! ScheduleTableViewCell
     
     cell.titleUpComming.text = upComming.title
     cell.noteUpComming.text =  upComming.note

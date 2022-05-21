@@ -50,7 +50,7 @@ class DateViewController: UIViewController {
   func setUpTable () {
     let nibDateRecommendation = UINib(nibName: "DateTableViewCell", bundle: nil)
     
-    dateRecomTableView.register(nibDateRecommendation, forCellReuseIdentifier: "DateCell")
+    dateRecomTableView.register(nibDateRecommendation, forCellReuseIdentifier: dateTableViewCellId)
     
   }
   
@@ -68,7 +68,7 @@ extension DateViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell",for: indexPath) as! DateTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: dateTableViewCellId,for: indexPath) as! DateTableViewCell
     let date = dateRecommendation[indexPath.row]
     
     cell.timeLabel.text = yearMonthDayString(date: date)

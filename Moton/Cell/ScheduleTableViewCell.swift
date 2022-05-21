@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UpCommingTableViewCell: UITableViewCell {
+class ScheduleTableViewCell: UITableViewCell {
     
   @IBOutlet weak var titleUpComming: UILabel!
   @IBOutlet weak var noteUpComming: UILabel!
