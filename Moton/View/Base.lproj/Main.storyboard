@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Date Recommendation-->
+        <!--Schedule-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DateViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,39 +17,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3FF-0P-far">
-                                <rect key="frame" x="16" y="71" width="343" height="378"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Up comming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLg-VD-uHV">
-                                <rect key="frame" x="16" y="462" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up comming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLg-VD-uHV">
+                                <rect key="frame" x="16" y="513" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-f7-xpt">
-                                <rect key="frame" x="16" y="511" width="343" height="127"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="qiZ-nY-aao" kind="embed" id="xnv-1M-J2x"/>
-                                </connections>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cza-a7-t6l">
-                                <rect key="frame" x="288" y="457" width="75" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhG-DK-7JH">
+                                <rect key="frame" x="16" y="140" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cza-a7-t6l">
+                                <rect key="frame" x="284" y="515" width="75" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="View All"/>
                                 <connections>
                                     <segue destination="cNd-k0-ce1" kind="show" id="byY-la-VJO"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3FF-0P-far">
+                                <rect key="frame" x="16" y="171" width="343" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="R68-cw-1Ji"/>
+                                </constraints>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-f7-xpt">
+                                <rect key="frame" x="16" y="547" width="343" height="134"/>
+                                <connections>
+                                    <segue destination="qiZ-nY-aao" kind="embed" id="xnv-1M-J2x"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DMh-f7-xpt" secondAttribute="bottom" constant="48" id="7Ry-xX-Fxq"/>
+                            <constraint firstItem="jhG-DK-7JH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AtV-QF-gH5"/>
+                            <constraint firstItem="DMh-f7-xpt" firstAttribute="top" secondItem="cza-a7-t6l" secondAttribute="bottom" constant="1" id="FiJ-Jh-OPx"/>
+                            <constraint firstItem="3FF-0P-far" firstAttribute="trailing" secondItem="cza-a7-t6l" secondAttribute="trailing" id="KbG-o5-a1v"/>
+                            <constraint firstItem="DMh-f7-xpt" firstAttribute="top" secondItem="RLg-VD-uHV" secondAttribute="bottom" constant="13" id="MBj-em-sXH"/>
+                            <constraint firstItem="RLg-VD-uHV" firstAttribute="leading" secondItem="DMh-f7-xpt" secondAttribute="leading" id="OOa-P6-4ZP"/>
+                            <constraint firstItem="jhG-DK-7JH" firstAttribute="leading" secondItem="3FF-0P-far" secondAttribute="leading" id="QG4-5H-m1m"/>
+                            <constraint firstItem="jhG-DK-7JH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tfw-TP-HFN"/>
+                            <constraint firstItem="jhG-DK-7JH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bSA-L8-EAA"/>
+                            <constraint firstItem="cza-a7-t6l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RLg-VD-uHV" secondAttribute="trailing" constant="8" symbolic="YES" id="cxc-Of-U0g"/>
+                            <constraint firstItem="3FF-0P-far" firstAttribute="top" secondItem="jhG-DK-7JH" secondAttribute="bottom" constant="10" id="e1w-7l-oeQ"/>
+                            <constraint firstItem="jhG-DK-7JH" firstAttribute="trailing" secondItem="3FF-0P-far" secondAttribute="trailing" id="e70-oo-EhP"/>
+                            <constraint firstItem="cza-a7-t6l" firstAttribute="trailing" secondItem="DMh-f7-xpt" secondAttribute="trailing" id="uM5-vf-oKF"/>
+                            <constraint firstItem="RLg-VD-uHV" firstAttribute="top" secondItem="3FF-0P-far" secondAttribute="bottom" constant="37" id="xzt-Up-pCu"/>
+                            <constraint firstItem="3FF-0P-far" firstAttribute="leading" secondItem="RLg-VD-uHV" secondAttribute="leading" id="yeU-9R-E9Q"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Date Recommendation" id="X6U-wt-yMD"/>
+                    <navigationItem key="navigationItem" title="Schedule" largeTitleDisplayMode="always" id="X6U-wt-yMD"/>
                     <connections>
                         <outlet property="dateRecomTableView" destination="3FF-0P-far" id="1EU-CN-e4M"/>
                         <segue destination="fEQ-gl-QIO" kind="show" identifier="showDetail" id="5HW-A5-nOi"/>
@@ -400,8 +422,8 @@
                         </imageReference>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fsy-D0-DxV">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Fsy-D0-DxV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -418,7 +440,7 @@
             <objects>
                 <viewController id="qiZ-nY-aao" customClass="SummaryViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGd-af-mdb">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="127"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="134"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-7B-TOp">
@@ -552,7 +574,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V5l-Ua-GzK"/>
+        <segue reference="5HW-A5-nOi"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>

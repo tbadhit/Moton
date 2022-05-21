@@ -26,6 +26,7 @@
 		16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */; };
 		16BF2D4B2838E3240012CA7C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D4A2838E3240012CA7C /* Const.swift */; };
 		4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */; };
+		4F8C31EE283938FE00DBD784 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */; };
 		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
 		ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */; };
@@ -58,6 +59,7 @@
 		16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingViewController.swift; sourceTree = "<group>"; };
 		16BF2D4A2838E3240012CA7C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
+		4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
 		ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewatchDatePickerViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				1618D8DB282FF876009DC3AF /* Assets.xcassets */,
 				1618D8E0282FF876009DC3AF /* Info.plist */,
 				1618D8D8282FF874009DC3AF /* Moton.xcdatamodeld */,
+				4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */,
 			);
 			path = Moton;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				ADE680592832264600B734C9 /* JournalListTableViewCell.xib in Resources */,
 				1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */,
 				ADE68065283226E700B734C9 /* DateRecommendationTableViewCell.xib in Resources */,
+				4F8C31EE283938FE00DBD784 /* SF-Pro.ttf in Resources */,
 				1618D8DC282FF876009DC3AF /* Assets.xcassets in Resources */,
 				1618D8D7282FF874009DC3AF /* Main.storyboard in Resources */,
 			);
