@@ -186,17 +186,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iY3-LY-0Df" id="zEK-20-F50">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-gm-3cf">
-                                                    <rect key="frame" x="138" y="12" width="67" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                    <connections>
-                                                        <action selector="addData:" destination="wo3-uD-feF" eventType="touchUpInside" id="FSM-6m-hNZ"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -211,7 +200,7 @@
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="bzr-Iv-agC"/>
                         <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="Ppb-gk-lOG">
                             <connections>
-                                <action selector="addButtonClicked:" destination="wo3-uD-feF" id="Ymk-FH-8nb"/>
+                                <action selector="addData:" destination="wo3-uD-feF" id="xdW-fW-iBD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -224,7 +213,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ym4-1v-cqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="1612"/>
+            <point key="canvasLocation" x="2247.1999999999998" y="1611.576354679803"/>
         </scene>
         <!--Journal-->
         <scene sceneID="wCv-pc-QFi">
@@ -453,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Frw-Yr-zy7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560.8000000000002" y="1353.3251231527095"/>
+            <point key="canvasLocation" x="3503.1999999999998" y="1353.3251231527095"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="cME-ig-8Zk">
@@ -475,12 +464,30 @@
                     <navigationItem key="navigationItem" id="o0p-nj-yZm"/>
                     <connections>
                         <outlet property="dateRecommendationTableView" destination="jru-Se-URO" id="gkH-04-7gK"/>
-                        <segue destination="wo3-uD-feF" kind="presentation" identifier="showForm" id="XPk-hR-Zgf"/>
+                        <segue destination="hI4-yS-eOn" kind="presentation" identifier="showForm" id="XPk-hR-Zgf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="501-A6-kti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-226.40000000000001" y="1611.576354679803"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H1G-9B-ZqH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hI4-yS-eOn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdL-gx-YS2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wo3-uD-feF" kind="relationship" relationship="rootViewController" id="BMT-e5-ryQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yj-Vu-Uls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304.8" y="1611.576354679803"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="tintColor"/>

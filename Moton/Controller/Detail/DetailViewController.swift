@@ -235,13 +235,19 @@ extension DetailViewController: UITableViewDelegate {
     
     selectedDateRecommendation = dateRecomList[indexPath.row]
     
-      performSegue(withIdentifier: "showForm", sender: selectedDateRecommendation)
+    performSegue(withIdentifier: "showForm", sender: selectedDateRecommendation)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showForm" {
-      let controller = segue.destination as! FormAddEventViewController
-      controller.dateRecommendation = selectedDateRecommendation
+        //Punya TB
+//      let controller = segue.destination as! FormAddEventViewController
+//      controller.dateRecommendation = selectedDateRecommendation
+        //
+        
+        let controller = segue.destination as! UINavigationController
+        let controllerTableView = controller.topViewController as! FormAddEventViewController
+        controllerTableView.dateRecommendation = selectedDateRecommendation
     }
   }
   
