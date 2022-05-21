@@ -8,13 +8,15 @@
 import UIKit
 import EventKit
 
-class WatchHistoryViewController: UIViewController, UITableViewDelegate {
+class WatchHistoryViewController: UIViewController {
   
   @IBOutlet weak var historyListTable: UITableView!
   
   let eventStore = EKEventStore()
   
   var historyList: [Schedule] = []
+    
+  var selectedMovieTitle: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -81,5 +83,20 @@ extension WatchHistoryViewController: UITableViewDataSource {
     
     return cell
   }
+}
+
+extension WatchHistoryViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMovieTitle = historyList[indexPath.row].title
+        performSegue(withIdentifier: "showRewatchDate", sender: nil)
+        print("YESS")
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRewatchDate" {
+            let controller = segue.destination as! RewatchDatePickerViewController
+            selectedMovieTitle = selectedMovieTitle?.components(separatedBy: "Moton - ")[1]
+            controller.movieTitle = selectedMovieTitle
+        }
+    }
 }
 

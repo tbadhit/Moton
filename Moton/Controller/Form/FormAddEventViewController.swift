@@ -12,6 +12,7 @@ class FormAddEventViewController: UITableViewController {
   
   var dateRecommendation: DateRecommendation?
   var reloadData: (() -> Void)?
+  var movieTitle : String?
   
   @IBOutlet weak var titleField: UITextField!
   @IBOutlet weak var notesField: UITextField!

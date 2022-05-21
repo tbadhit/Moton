@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
   var dateRecomList : [DateRecommendation] = []
   let eventStore = EKEventStore()
   var selectedDateRecommendation: DateRecommendation?
+  var movieTitle : String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -219,10 +220,6 @@ class DetailViewController: UIViewController {
   
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 90.0
-  }
-  
-  override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-    self.dateRecommendationTableView.reloadData()
   }
 
 }
