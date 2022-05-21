@@ -9,32 +9,16 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
   
-  @IBOutlet weak var scheduleTableView: UITableView!
+  @IBOutlet weak var titleSchedule: UILabel!
+  @IBOutlet weak var notesSchedule: UILabel!
+  @IBOutlet weak var dateDurationSchedule: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
-    setUpTable()
-    scheduleTableView.dataSource = self
+    
+    titleSchedule.text = "Upin Ipin"
+    notesSchedule.text = "Home"
+    dateDurationSchedule.text = "Tus, 4 May 2022, 09:00 - 12:00"
   }
-  
-  
-  func setUpTable () {
-    let nibScheduleList = UINib(nibName: "ScheduleListTableViewCell", bundle: nil)
-    scheduleTableView.register(nibScheduleList, forCellReuseIdentifier: "scheduleListCell")
-  }
-  
 }
 
-extension ScheduleViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleListCell", for: indexPath) as! ScheduleListTableViewCell
-    
-    cell.titleLabel.text = "Testing"
-    
-    return cell
-    
-  }
-}
+

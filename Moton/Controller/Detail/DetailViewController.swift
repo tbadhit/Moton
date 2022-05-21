@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  Moton
 //
-//  Created by Tubagus Adhitya Permana on 18/05/22.
+//  Created by Tubagus Adhitya Permana on 21/05/22.
 //
 
 import UIKit
@@ -10,12 +10,13 @@ import EventKit
 
 class DetailViewController: UIViewController {
   
-  @IBOutlet weak var dateRecommendationTableView: UITableView!
-  var dateRecomList : [DateRecommendation] = []
-  
-  let eventStore = EKEventStore()
-  
   var date: Date?
+  
+  @IBOutlet weak var dateRecommendationTableView: UITableView!
+  
+  var dateRecomList : [DateRecommendation] = []
+  let eventStore = EKEventStore()
+  var selectedDateRecommendation: DateRecommendation?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,6 +24,7 @@ class DetailViewController: UIViewController {
     // Do any additional setup after loading the view.
     self.navigationItem.title = date?.dayAndTimeText
     dateRecommendationTableView.dataSource = self
+    dateRecommendationTableView.delegate = self
     
     //    dateRecommendationTableView.delegate = self
     
@@ -38,9 +40,9 @@ class DetailViewController: UIViewController {
     calendar.timeZone = TimeZone(secondsFromGMT: 0)!
     calendar.timeZone = TimeZone(abbreviation: localTimeZoneAbbreviation)!
     let startOfDate = calendar.startOfDay(for: date!) // 2022-05-19 00:00:00 +7000
-    let endOfDate = Calendar.current.date(byAdding: .day, value: 1, to: startOfDate) // 2022-05-20 00:00:00 +0000
+//    let endOfDate = Calendar.current.date(byAdding: .day, value: 1, to: startOfDate) // 2022-05-20 00:00:00 +0000
     
-    let dateHourArray = Date.dateHours(from: startOfDate, to: endOfDate!)
+//    let dateHourArray = Date.dateHours(from: startOfDate, to: endOfDate!)
 //    print(dateHourArray)
     
     //    for hour in dateHourArray {
@@ -57,7 +59,7 @@ class DetailViewController: UIViewController {
     
     let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
     let eventKitEvents = eventStore.events(matching: predicate)
-//    print("Data Event : \(eventKitEvents)")
+    print(eventKitEvents)
     
     if eventKitEvents.isEmpty {
       let duration = getDuration(startDate: startDate, endDate: endDate)
@@ -207,21 +209,7 @@ class DetailViewController: UIViewController {
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 90.0
   }
-  
-  func getFilteredList(date: Date) {
-    //    let startDate = date
-    //
-    ////    let endDate = Calendar.current.date(byAdding: .day, value: 1, to: today)!
-    //
-    //    let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
-    //
-    //    let eventKitEvents = eventStore.events(matching: predicate)
-    //
-    //    for event in eventKitEvents {
-    //      for freeTime in dateList {
-    //      }
-    //    }
-  }
+
 }
 
 extension DetailViewController: UITableViewDataSource {
@@ -240,4 +228,22 @@ extension DetailViewController: UITableViewDataSource {
     
     return cell
   }
+}
+
+extension DetailViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    selectedDateRecommendation = dateRecomList[indexPath.row]
+    
+      performSegue(withIdentifier: "showForm", sender: selectedDateRecommendation)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showForm" {
+      let controller = segue.destination as! FormAddEventViewController
+      controller.dateRecommendation = selectedDateRecommendation
+    }
+  }
+  
+  
 }

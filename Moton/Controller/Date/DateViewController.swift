@@ -7,12 +7,11 @@ import UIKit
 
 class DateViewController: UIViewController {
   
-  
-  
   @IBOutlet weak var dateRecomTableView: UITableView!
   var scheduleList: [Schedule] = Schedule.sampleData
   
   var dateRecommendation: [Date] = []
+  var selectedDate: Date?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -49,21 +48,12 @@ class DateViewController: UIViewController {
     return dateFormatter.string(from: date) // MM-dd-yyyy
   }
   
-  //Untuk SetUp Table dengan Cell-nya
   func setUpTable () {
-    //    // Cell Schedule List
-    //    let nibScheduleList = UINib(nibName: "ScheduleListTableViewCell", bundle: nil)
-    
-    // Cell Date Recommendation
     let nibDateRecommendation = UINib(nibName: "DateTableViewCell", bundle: nil)
     
-    // Set Table Schedule List ke Cell-nya
     dateRecomTableView.register(nibDateRecommendation, forCellReuseIdentifier: "DateCell")
     
-    // MARK: Lanjut ke Table / Collection Date Recommendation
   }
-  
-  // MARK: Table View Function
   
   //Set ukuran height cell
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -73,12 +63,11 @@ class DateViewController: UIViewController {
 
 
 extension DateViewController: UITableViewDataSource {
-  // To return how many cell display
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return dateRecommendation.count
   }
   
-  //Cell's Data
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell",for: indexPath) as! DateTableViewCell
     let date = dateRecommendation[indexPath.row]
@@ -91,15 +80,18 @@ extension DateViewController: UITableViewDataSource {
 
 
 extension DateViewController: UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
-//      let detail = FormAddEventViewController()
     
-    detail.date = dateRecommendation[indexPath.row]
-    
-    //detail.hidesBottomBarWhenPushed = true
-    self.navigationController?.pushViewController(detail, animated: true)
-//      performSegue(withIdentifier: "formSegue", sender: nil)
+      selectedDate = dateRecommendation[indexPath.row]
+      performSegue(withIdentifier: "showDetail", sender: selectedDate)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showDetail" {
+      let controller = segue.destination as! DetailViewController
+      controller.date = selectedDate
+    }
   }
 }
 
