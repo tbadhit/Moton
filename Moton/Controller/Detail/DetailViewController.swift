@@ -246,11 +246,6 @@ extension DetailViewController: UITableViewDelegate {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showForm" {
-        //Punya TB
-//      let controller = segue.destination as! FormAddEventViewController
-//      controller.dateRecommendation = selectedDateRecommendation
-        //
-        
         let controller = segue.destination as! UINavigationController
         let controllerTableView = controller.topViewController as! FormAddEventViewController
         controllerTableView.dateRecommendation = selectedDateRecommendation
