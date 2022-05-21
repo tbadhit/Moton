@@ -77,6 +77,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qgm-nc-h5P"/>
+                    <connections>
+                        <outlet property="upCommingtableView" destination="4gW-jQ-bZi" id="Z2Q-gn-YNp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsV-Eh-aV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
