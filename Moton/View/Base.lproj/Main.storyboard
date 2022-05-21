@@ -199,7 +199,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Event" leftItemsSupplementBackButton="YES" id="DIT-at-TyB">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="bzr-Iv-agC"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add" style="plain" id="Ppb-gk-lOG">
+                        <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="Ppb-gk-lOG">
                             <connections>
                                 <action selector="addButtonClicked:" destination="wo3-uD-feF" id="Ymk-FH-8nb"/>
                             </connections>
