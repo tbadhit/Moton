@@ -13,6 +13,7 @@
             <string>SFPro-Bold</string>
             <string>SFPro-Light</string>
             <string>SFPro-Regular</string>
+            <string>SFPro-Thin</string>
         </array>
     </customFonts>
     <scenes>
@@ -25,19 +26,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up comming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLg-VD-uHV">
-                                <rect key="frame" x="15.999999999999993" y="512.33333333333337" width="96.333333333333314" height="20.333333333333371"/>
+                                <rect key="frame" x="16" y="512" width="98" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhG-DK-7JH">
-                                <rect key="frame" x="16" y="140" width="343" height="20.333333333333343"/>
+                                <rect key="frame" x="16" y="140" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cza-a7-t6l">
-                                <rect key="frame" x="284" y="513.66666666666663" width="75" height="31"/>
+                                <rect key="frame" x="284" y="513" width="75" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="View All"/>
                                 <connections>
@@ -45,14 +46,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3FF-0P-far">
-                                <rect key="frame" x="16" y="170.33333333333337" width="343" height="305"/>
+                                <rect key="frame" x="16" y="170" width="343" height="305"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="305" id="R68-cw-1Ji"/>
                                 </constraints>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-f7-xpt">
-                                <rect key="frame" x="16" y="545.66666666666663" width="343" height="135.33333333333337"/>
+                                <rect key="frame" x="16" y="545" width="343" height="136"/>
                                 <connections>
                                     <segue destination="qiZ-nY-aao" kind="embed" id="xnv-1M-J2x"/>
                                 </connections>
@@ -124,11 +125,12 @@
                     <navigationItem key="navigationItem" title="Upcoming" largeTitleDisplayMode="always" id="qgm-nc-h5P"/>
                     <connections>
                         <outlet property="upCommingtableView" destination="4gW-jQ-bZi" id="Z2Q-gn-YNp"/>
+                        <segue destination="Ykj-bf-job" kind="presentation" identifier="showTitleDetail" id="99k-io-p99"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsV-Eh-aV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="835.71428571428578"/>
+            <point key="canvasLocation" x="2065" y="836"/>
         </scene>
         <!--Add Event-->
         <scene sceneID="tlF-wd-2Ob">
@@ -269,13 +271,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh your moment by re-watching movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-L2-m2o">
-                                <rect key="frame" x="16" y="140" width="343" height="21"/>
+                                <rect key="frame" x="16" y="140" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Fj-jby">
-                                <rect key="frame" x="16" y="171" width="343" height="558"/>
+                                <rect key="frame" x="16" y="170" width="343" height="559"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="SAP-Aj-flh"/>
@@ -431,47 +433,119 @@
             </objects>
             <point key="canvasLocation" x="18.399999999999999" y="836.45320197044339"/>
         </scene>
+        <!--Show Title View Controller-->
+        <scene sceneID="McA-dc-gsC">
+            <objects>
+                <viewController id="Ykj-bf-job" customClass="ShowTitleViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SsP-cn-r4T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53k-ks-uZv">
+                                <rect key="frame" x="61" y="189" width="253" height="294"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Title :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1E-U2-fXe">
+                                        <rect key="frame" x="18" y="49" width="98" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-QD-pAj">
+                                        <rect key="frame" x="18" y="78" width="227" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5k-Eb-zhL">
+                                        <rect key="frame" x="18" y="155" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDR-gH-auX">
+                                        <rect key="frame" x="18" y="184" width="227" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O6I-lN-Tst"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailView" destination="53k-ks-uZv" id="fh4-dF-Fch"/>
+                        <outlet property="movieTitleLabel" destination="FFj-QD-pAj" id="TXc-hz-BVq"/>
+                        <outlet property="notesLabel" destination="HDR-gH-auX" id="rOk-7Q-0dU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wk-EJ-Oi1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3661.5999999999999" y="835.71428571428578"/>
+        </scene>
         <!--Summary View Controller-->
         <scene sceneID="ZBy-yT-MDl">
             <objects>
                 <viewController id="qiZ-nY-aao" customClass="SummaryViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGd-af-mdb">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="135.33333333333334"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thb-Z9-lS4">
-                                <rect key="frame" x="0.0" y="15" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thb-Z9-lS4">
+                                <rect key="frame" x="16" y="19" width="311" height="96"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-Vk-L6y">
-                                        <rect key="frame" x="16" y="40" width="311" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-Vk-L6y">
+                                        <rect key="frame" x="16" y="34" width="279" height="21"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Thin" family="SF Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-7B-TOp">
-                                        <rect key="frame" x="16" y="11" width="311" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-7B-TOp">
+                                        <rect key="frame" x="16" y="10" width="279" height="21"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date - End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-BN-Aho">
-                                        <rect key="frame" x="16" y="69" width="311" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date - End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-BN-Aho">
+                                        <rect key="frame" x="16" y="65" width="279" height="21"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.1686274707" green="0.1686274707" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Hzf-7B-TOp" firstAttribute="leading" secondItem="thb-Z9-lS4" secondAttribute="leading" constant="16" id="1Za-On-azZ"/>
+                                    <constraint firstItem="uT2-Vk-L6y" firstAttribute="leading" secondItem="thb-Z9-lS4" secondAttribute="leading" constant="16" id="DQh-Mq-2ci"/>
+                                    <constraint firstAttribute="trailing" secondItem="IZO-BN-Aho" secondAttribute="trailing" constant="16" id="H8j-CA-0e0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hzf-7B-TOp" secondAttribute="trailing" constant="16" id="VBD-Xy-ikf"/>
+                                    <constraint firstAttribute="bottom" secondItem="IZO-BN-Aho" secondAttribute="bottom" constant="10" id="Y51-ts-k0R"/>
+                                    <constraint firstItem="IZO-BN-Aho" firstAttribute="leading" secondItem="thb-Z9-lS4" secondAttribute="leading" constant="16" id="aZv-A1-pAX"/>
+                                    <constraint firstItem="IZO-BN-Aho" firstAttribute="top" secondItem="uT2-Vk-L6y" secondAttribute="bottom" constant="10" id="c7f-63-qlL"/>
+                                    <constraint firstAttribute="trailing" secondItem="uT2-Vk-L6y" secondAttribute="trailing" constant="16" id="fFJ-UI-B6L"/>
+                                    <constraint firstItem="Hzf-7B-TOp" firstAttribute="top" secondItem="thb-Z9-lS4" secondAttribute="top" constant="10" id="oZi-WK-u95"/>
+                                    <constraint firstItem="uT2-Vk-L6y" firstAttribute="top" secondItem="Hzf-7B-TOp" secondAttribute="bottom" constant="3" id="tjr-mG-EDf"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mkg-af-RmN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mkg-af-RmN" firstAttribute="trailing" secondItem="thb-Z9-lS4" secondAttribute="trailing" constant="16" id="8MG-bZ-FkI"/>
+                            <constraint firstItem="thb-Z9-lS4" firstAttribute="leading" secondItem="mkg-af-RmN" secondAttribute="leading" constant="16" id="WE0-T2-6YV"/>
+                            <constraint firstItem="mkg-af-RmN" firstAttribute="bottom" secondItem="thb-Z9-lS4" secondAttribute="bottom" constant="21" id="cQR-m6-850"/>
+                            <constraint firstItem="mkg-af-RmN" firstAttribute="top" secondItem="thb-Z9-lS4" secondAttribute="top" constant="25" id="nwl-yb-4bI"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="thb-Z9-lS4" id="8cZ-nw-Fgr"/>
                         <outlet property="dateDurationSchedule" destination="IZO-BN-Aho" id="eqP-GO-9Zj"/>
                         <outlet property="notesSchedule" destination="uT2-Vk-L6y" id="Z7Y-bv-nFF"/>
                         <outlet property="titleSchedule" destination="Hzf-7B-TOp" id="MbR-No-ez8"/>
@@ -595,7 +669,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5HW-A5-nOi"/>
+        <segue reference="V5l-Ua-GzK"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
