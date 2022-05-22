@@ -91,7 +91,7 @@
         <!--Upcoming-->
         <scene sceneID="gQZ-0h-ZQM">
             <objects>
-                <viewController id="cNd-k0-ce1" customClass="UpCommingViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="cNd-k0-ce1" customClass="UpCommingViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCd-D0-FZf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -471,13 +471,13 @@
         <!--Detail View Controller-->
         <scene sceneID="cME-ig-8Zk">
             <objects>
-                <viewController id="fEQ-gl-QIO" customClass="DetailViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fEQ-gl-QIO" customClass="DetailViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hfn-P0-jlW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jru-Se-URO">
-                                <rect key="frame" x="16" y="138" width="343" height="674"/>
+                                <rect key="frame" x="16" y="138" width="343" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bed-7a-T9d">

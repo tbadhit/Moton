@@ -25,7 +25,6 @@
 		16BF2D442838A51D0012CA7C /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BF2D422838A51D0012CA7C /* ScheduleTableViewCell.xib */; };
 		16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */; };
 		16BF2D4B2838E3240012CA7C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D4A2838E3240012CA7C /* Const.swift */; };
-		4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */; };
 		4F8C31EE283938FE00DBD784 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
 		ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */; };
@@ -55,7 +54,6 @@
 		16BF2D422838A51D0012CA7C /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingViewController.swift; sourceTree = "<group>"; };
 		16BF2D4A2838E3240012CA7C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
 		ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewatchDatePickerViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				16BF2D3F283897F70012CA7C /* Detail */,
 				16247FC72832514900D885B3 /* Date */,
 				16247FC82832515C00D885B3 /* History */,
-				4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 				163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */,
 				ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */,
 				16BF2D432838A51D0012CA7C /* ScheduleTableViewCell.swift in Sources */,
-				4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */,
 				16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				16BF2D342837CE240012CA7C /* SummaryViewController.swift in Sources */,
