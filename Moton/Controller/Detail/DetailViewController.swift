@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.navigationItem.title = date?.dayAndTimeText
+    self.navigationItem.title = date?.yearMonthDayText
     dateRecommendationTableView.dataSource = self
     dateRecommendationTableView.delegate = self
     

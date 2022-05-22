@@ -45,13 +45,13 @@ class DateViewController: UIViewController {
   }
   
   func requestAccessCalendar() {
-        eventStore.requestAccess(to: .event) { success, error in
-          if success && error == nil {
-            print("Success")
-          } else {
-            print("Error")
-          }
-        }
+    eventStore.requestAccess(to: .event) { success, error in
+      if success && error == nil {
+        print("Success")
+      } else {
+        print("Error")
+      }
+    }
   }
   
   func yearMonthDayString(date: Date) -> String
@@ -87,10 +87,9 @@ extension DateViewController: UITableViewDataSource {
     
     cell.backgroundColor = UIColor.white
     cell.timeLabel.text = yearMonthDayString(date: date)
-      cell.contentView.backgroundColor = UIColor.white
-//      cell.timeLabel.textColor = UIColor.white
-      cell.containerView.layer.cornerRadius = 10
-      
+    cell.contentView.backgroundColor = UIColor(named: "SeparateColor")
+    cell.containerView.layer.cornerRadius = 10
+    
     return cell
   }
 }
@@ -100,8 +99,8 @@ extension DateViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-      selectedDate = dateRecommendation[indexPath.row]
-      performSegue(withIdentifier: "showDetail", sender: selectedDate)
+    selectedDate = dateRecommendation[indexPath.row]
+    performSegue(withIdentifier: "showDetail", sender: selectedDate)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

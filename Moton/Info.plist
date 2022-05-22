@@ -6,8 +6,6 @@
 	<array>
 		<string>SF-Pro.ttf</string>
 	</array>
-	<key>NSCalendarsUsageDescription</key>
-	<string>We need access to your calendar in order to help you track events.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

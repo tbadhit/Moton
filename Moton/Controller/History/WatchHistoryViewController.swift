@@ -28,7 +28,7 @@ class WatchHistoryViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    initWatchHistory()
+    
   }
   
   func initWatchHistory() {

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +37,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="0F0-sC-a2T"/>
                                 </constraints>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" systemColor="labelColor"/>
+                                <color key="sectionIndexBackgroundColor" name="Color1"/>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-Tg-W0D">
                                 <rect key="frame" x="16" y="587" width="343" height="100"/>
@@ -385,7 +387,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Color1"/>
                     </tabBar>
                     <connections>
                         <segue destination="pX0-pR-CBq" kind="relationship" relationship="viewControllers" id="gjT-S0-zRq"/>
@@ -403,31 +405,31 @@
                     <tabBarItem key="tabBarItem" title="Date" id="Ua5-wS-pWW">
                         <imageReference key="image" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="landscapeImage" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="largeContentSizeImage" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" name="Color1"/>
                         <imageReference key="selectedImage" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
@@ -575,31 +577,31 @@
                     <tabBarItem key="tabBarItem" title="Watch History" id="v8d-M4-j4V">
                         <imageReference key="image" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="landscapeImage" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="largeContentSizeImage" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
                             </hierarchicalColors>
                         </imageReference>
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" name="Color1"/>
                         <imageReference key="selectedImage" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
+                                <color name="Color1"/>
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
@@ -707,6 +709,12 @@
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="tiketMoton" width="779" height="1439"/>
+        <namedColor name="Color1">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
