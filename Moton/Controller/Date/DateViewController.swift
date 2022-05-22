@@ -18,7 +18,6 @@ class DateViewController: UIViewController {
     dateRecomTableView.delegate = self
     dateRecomTableView.dataSource = self
     initDateRecommendation()
-      dateRecomTableView.layer.cornerRadius = 10
   }
   
   func initDateRecommendation() {
@@ -71,10 +70,11 @@ extension DateViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: dateTableViewCellId,for: indexPath) as! DateTableViewCell
     let date = dateRecommendation[indexPath.row]
-      
+    
+    cell.backgroundColor = UIColor.white
     cell.timeLabel.text = yearMonthDayString(date: date)
-      cell.contentView.backgroundColor = UIColor.darkGray
-      cell.timeLabel.textColor = UIColor.white
+//      cell.contentView.backgroundColor = UIColor.darkGray
+//      cell.timeLabel.textColor = UIColor.white
       
     return cell
   }
