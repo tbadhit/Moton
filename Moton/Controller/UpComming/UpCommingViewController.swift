@@ -8,11 +8,12 @@
 import UIKit
 import EventKit
 
-class UpCommingViewController: UIViewController, UITableViewDelegate {
+class UpCommingViewController: UIViewController {
   
   @IBOutlet weak var upCommingtableView: UITableView!
   var upCommingList: [Schedule] = []
-  
+  var selectedMovieTitle: String?
+  var selectedNotes : String?
   let eventStore = EKEventStore()
   
   override func viewDidLoad() {
@@ -69,12 +70,35 @@ extension UpCommingViewController: UITableViewDataSource {
     let upComming = upCommingList[indexPath.row]
     let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellId,for: indexPath) as! ScheduleTableViewCell
     
-    cell.titleUpComming.text = upComming.title
+    cell.titleUpComming.text = upComming.title.components(separatedBy: "Moton - ")[1]
     cell.noteUpComming.text =  upComming.note
     cell.dateDurationUpComming.text = "\(upComming.startDate.monthDayTimeText) - \(upComming.endDate.time)"
       cell.containerView.layer.cornerRadius = 10
       
     return cell
   }
+   
+}
+
+extension UpCommingViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMovieTitle = upCommingList[indexPath.row].title
+        selectedNotes = upCommingList[indexPath.row].note
+        performSegue(withIdentifier: "showTitleDetail", sender: selectedMovieTitle)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTitleDetail" {
+
+        let controller = segue.destination as! ShowTitleViewController
+
+
+        controller.movieTitle = selectedMovieTitle?.components(separatedBy: "Moton - ")[1]
+        controller.notes = selectedNotes
+
+                
+            
+        }
+    }
 }
 

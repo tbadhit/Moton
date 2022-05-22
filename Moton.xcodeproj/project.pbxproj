@@ -27,6 +27,7 @@
 		16BF2D4B2838E3240012CA7C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D4A2838E3240012CA7C /* Const.swift */; };
 		4F8C31EE283938FE00DBD784 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
+		AD8F18F2283A02150045434F /* ShowTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F18F1283A02150045434F /* ShowTitleViewController.swift */; };
 		ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */; };
 		ADCFDA332837EF61008DE69B /* FormAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */; };
 		ADE68064283226E700B734C9 /* DateRecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */; };
@@ -56,6 +57,7 @@
 		16BF2D4A2838E3240012CA7C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
+		AD8F18F1283A02150045434F /* ShowTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTitleViewController.swift; sourceTree = "<group>"; };
 		ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewatchDatePickerViewController.swift; sourceTree = "<group>"; };
 		ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAddEventViewController.swift; sourceTree = "<group>"; };
 		ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendationTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */,
+				AD8F18F1283A02150045434F /* ShowTitleViewController.swift */,
 			);
 			path = UpComming;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */,
 				16BF2D432838A51D0012CA7C /* ScheduleTableViewCell.swift in Sources */,
 				16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */,
+				AD8F18F2283A02150045434F /* ShowTitleViewController.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				16BF2D342837CE240012CA7C /* SummaryViewController.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
