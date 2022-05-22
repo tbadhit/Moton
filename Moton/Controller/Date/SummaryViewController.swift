@@ -13,7 +13,7 @@ class SummaryViewController: UIViewController {
   @IBOutlet weak var titleSchedule: UILabel!
   @IBOutlet weak var notesSchedule: UILabel!
   @IBOutlet weak var dateDurationSchedule: UILabel!
-  
+  @IBOutlet weak var contentView: UIView!
   var upCommingSchedule: Schedule?
   
   let eventStore = EKEventStore()
@@ -26,6 +26,7 @@ class SummaryViewController: UIViewController {
     titleSchedule.text = upCommingSchedule?.title
     notesSchedule.text = upCommingSchedule?.note
     dateDurationSchedule.text = "\(upCommingSchedule?.startDate.monthDayTimeText ?? "") - \(upCommingSchedule?.endDate.time ?? "")"
+      contentView.layer.cornerRadius = 10
   }
   
   func initUpComming() {
