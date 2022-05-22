@@ -12,6 +12,9 @@ class ScheduleTableViewCell: UITableViewCell {
   @IBOutlet weak var titleUpComming: UILabel!
   @IBOutlet weak var noteUpComming: UILabel!
   @IBOutlet weak var dateDurationUpComming: UILabel!
+
+  @IBOutlet weak var containerView: UIView!
+    
   override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

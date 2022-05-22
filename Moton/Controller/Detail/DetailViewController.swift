@@ -236,7 +236,7 @@ extension DetailViewController: UITableViewDataSource {
     
     cell.dateLabel.text = "\(dateItem.duration)"
     cell.timeLabel.text = "\(dateItem.startTime.time) - \(dateItem.endTime.time)"
-    
+    cell.containerView.layer.cornerRadius = 10
     return cell
   }
 }
