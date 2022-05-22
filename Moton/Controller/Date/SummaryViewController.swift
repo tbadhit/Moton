@@ -21,14 +21,14 @@ class SummaryViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    initDateRecom()
+    initUpComming()
     
     titleSchedule.text = upCommingSchedule?.title
     notesSchedule.text = upCommingSchedule?.note
     dateDurationSchedule.text = "\(upCommingSchedule?.startDate.monthDayTimeText ?? "") - \(upCommingSchedule?.endDate.time ?? "")"
   }
   
-  func initDateRecom() {
+  func initUpComming() {
     var calendar = Calendar(identifier: .gregorian)
     var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
     calendar.timeZone = TimeZone(secondsFromGMT: 0)!
@@ -36,15 +36,17 @@ class SummaryViewController: UIViewController {
     let today = calendar.startOfDay(for: Date())
     
     let startDate = setDate(date: today, addDay: 0)
-    let endDate = startDate
+    let endDate = setDate(date: today, addDay: 6)
     
     let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
     let eventKitEvents = eventStore.events(matching: predicate).filter({ event in
       event.title.hasPrefix("Moton")
     })
     
-    for event in eventKitEvents {
-      upCommingSchedule = Schedule(title: event.title, startDate: event.startDate, endDate: event.endDate, note: event.notes ?? "")
+    let event = eventKitEvents.first
+    
+    if event != nil {
+      upCommingSchedule = Schedule(title: event?.title ?? "", startDate: event?.startDate ?? Date(), endDate: event?.endDate ?? Date(), note: event?.notes ?? "")
     }
   }
   

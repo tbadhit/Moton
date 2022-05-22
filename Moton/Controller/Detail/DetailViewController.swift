@@ -254,9 +254,6 @@ extension DetailViewController: UITableViewDelegate {
         let controllerTableView = controller.topViewController as! FormAddEventViewController
         controllerTableView.dateRecommendation = selectedDateRecommendation
         controllerTableView.reloadData = {
-//          DispatchQueue.main.async {
-//            self.reloadData()
-//          }
           self.reloadData()
         }
     }
