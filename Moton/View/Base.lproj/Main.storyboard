@@ -121,7 +121,7 @@
                             <constraint firstAttribute="bottom" secondItem="4gW-jQ-bZi" secondAttribute="bottom" id="r5E-Y9-JeN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Upcoming" id="qgm-nc-h5P"/>
+                    <navigationItem key="navigationItem" title="Upcoming" largeTitleDisplayMode="always" id="qgm-nc-h5P"/>
                     <connections>
                         <outlet property="upCommingtableView" destination="4gW-jQ-bZi" id="Z2Q-gn-YNp"/>
                     </connections>
@@ -268,9 +268,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Fj-jby">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Fj-jby">
                                 <rect key="frame" x="16" y="171" width="343" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="SAP-Aj-flh"/>
+                                </constraints>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh your moment by re-watching movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-L2-m2o">
                                 <rect key="frame" x="16" y="140" width="343" height="21"/>
@@ -283,10 +287,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nqe-L2-m2o" firstAttribute="top" secondItem="Z9z-va-zIC" secondAttribute="top" id="0Yj-5T-Wll"/>
+                            <constraint firstAttribute="bottom" secondItem="l6s-Fj-jby" secondAttribute="bottom" id="9wm-V3-CR6"/>
                             <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="nqe-L2-m2o" secondAttribute="trailing" constant="16" id="AH1-f5-TvN"/>
+                            <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="GYy-1Z-La1"/>
+                            <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="l6s-Fj-jby" secondAttribute="trailing" constant="16" id="Q2c-i2-8L2"/>
                             <constraint firstItem="nqe-L2-m2o" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="X3a-Gx-Fzv"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="ZeV-nh-Ab4"/>
                             <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="l6s-Fj-jby" secondAttribute="trailing" constant="16" id="a1L-YI-KJh"/>
+                            <constraint firstItem="l6s-Fj-jby" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="ece-qG-1DX"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="gS6-o3-Gao"/>
                             <constraint firstAttribute="bottom" secondItem="l6s-Fj-jby" secondAttribute="bottom" id="l58-Od-V5V"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="pDv-MA-OJC"/>
@@ -476,9 +484,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jru-Se-URO">
-                                <rect key="frame" x="16" y="138" width="343" height="723"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jru-Se-URO">
+                                <rect key="frame" x="16" y="138" width="343" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bed-7a-T9d">
                                 <rect key="frame" x="16" y="108" width="343" height="20"/>
@@ -491,14 +500,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KoO-Ka-9Dw" firstAttribute="trailing" secondItem="jru-Se-URO" secondAttribute="trailing" constant="16" id="1Uw-dU-XEz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jru-Se-URO" secondAttribute="bottom" constant="-34" id="6W0-6Q-ssf"/>
                             <constraint firstItem="bed-7a-T9d" firstAttribute="leading" secondItem="KoO-Ka-9Dw" secondAttribute="leading" constant="16" id="FJ6-H9-1dU"/>
                             <constraint firstItem="jru-Se-URO" firstAttribute="leading" secondItem="KoO-Ka-9Dw" secondAttribute="leading" constant="16" id="H34-Vq-71q"/>
                             <constraint firstItem="jru-Se-URO" firstAttribute="top" secondItem="bed-7a-T9d" secondAttribute="bottom" constant="10" id="WPm-pM-IxE"/>
                             <constraint firstItem="bed-7a-T9d" firstAttribute="top" secondItem="KoO-Ka-9Dw" secondAttribute="top" constant="20" id="XBB-mP-FXn"/>
-                            <constraint firstItem="jru-Se-URO" firstAttribute="bottom" secondItem="KoO-Ka-9Dw" secondAttribute="bottom" constant="83" id="cuh-yl-KHR"/>
                             <constraint firstItem="KoO-Ka-9Dw" firstAttribute="trailing" secondItem="bed-7a-T9d" secondAttribute="trailing" constant="16" id="dpf-Sa-nZh"/>
                             <constraint firstItem="KoO-Ka-9Dw" firstAttribute="trailing" secondItem="jru-Se-URO" secondAttribute="trailing" constant="16" id="eoK-0P-uAD"/>
-                            <constraint firstAttribute="bottom" secondItem="jru-Se-URO" secondAttribute="bottom" id="eth-hp-kaa"/>
                             <constraint firstItem="jru-Se-URO" firstAttribute="leading" secondItem="KoO-Ka-9Dw" secondAttribute="leading" constant="16" id="f2Y-ae-SPg"/>
                             <constraint firstItem="jru-Se-URO" firstAttribute="top" secondItem="bed-7a-T9d" secondAttribute="bottom" constant="10" id="lMy-Ty-fKR"/>
                         </constraints>
