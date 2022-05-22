@@ -78,7 +78,7 @@ extension RewatchDatePickerViewController : UITableViewDataSource {
         let date = dateRecommendation[indexPath.row]
 
         cell.timeLabel.text = yearMonthDayString(date: date)
-
+        cell.containerView.layer.cornerRadius = 10
         return cell
     }
 }

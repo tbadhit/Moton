@@ -44,7 +44,7 @@
                                     <segue destination="cNd-k0-ce1" kind="show" id="byY-la-VJO"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3FF-0P-far">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3FF-0P-far">
                                 <rect key="frame" x="16" y="170.33333333333337" width="343" height="305"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="305" id="R68-cw-1Ji"/>
@@ -96,21 +96,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4gW-jQ-bZi">
-                                <rect key="frame" x="16" y="180" width="343" height="583"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The following time you have scheduled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZo-G0-lxF">
-                                <rect key="frame" x="16" y="151" width="291" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following time you have scheduled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZo-G0-lxF">
+                                <rect key="frame" x="16" y="140" width="343" height="21"/>
                                 <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4gW-jQ-bZi">
+                                <rect key="frame" x="16" y="171" width="343" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Rg-Td-eql"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Rg-Td-eql" firstAttribute="trailing" secondItem="VZo-G0-lxF" secondAttribute="trailing" constant="16" id="J6Q-7D-Ba4"/>
+                            <constraint firstItem="4gW-jQ-bZi" firstAttribute="leading" secondItem="8Rg-Td-eql" secondAttribute="leading" constant="16" id="UVs-Xg-QSG"/>
+                            <constraint firstItem="4gW-jQ-bZi" firstAttribute="top" secondItem="VZo-G0-lxF" secondAttribute="bottom" constant="10" id="ZWg-VU-JLP"/>
+                            <constraint firstItem="8Rg-Td-eql" firstAttribute="trailing" secondItem="4gW-jQ-bZi" secondAttribute="trailing" constant="16" id="ccb-Ku-dzz"/>
+                            <constraint firstItem="VZo-G0-lxF" firstAttribute="top" secondItem="8Rg-Td-eql" secondAttribute="top" id="dJJ-4S-SPI"/>
+                            <constraint firstItem="4gW-jQ-bZi" firstAttribute="top" secondItem="VZo-G0-lxF" secondAttribute="bottom" constant="10" id="exa-ZK-H0h"/>
+                            <constraint firstItem="VZo-G0-lxF" firstAttribute="leading" secondItem="8Rg-Td-eql" secondAttribute="leading" constant="16" id="hjd-yS-Mra"/>
+                            <constraint firstAttribute="bottom" secondItem="4gW-jQ-bZi" secondAttribute="bottom" id="r5E-Y9-JeN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upcoming" id="qgm-nc-h5P"/>
                     <connections>
@@ -316,14 +324,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Fj-jby">
-                                <rect key="frame" x="16" y="120" width="343" height="599"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Fj-jby">
+                                <rect key="frame" x="16" y="171" width="343" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh your moment by re-watching movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-L2-m2o">
+                                <rect key="frame" x="16" y="140" width="343" height="21"/>
+                                <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z9z-va-zIC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nqe-L2-m2o" firstAttribute="top" secondItem="Z9z-va-zIC" secondAttribute="top" id="0Yj-5T-Wll"/>
+                            <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="nqe-L2-m2o" secondAttribute="trailing" constant="16" id="AH1-f5-TvN"/>
+                            <constraint firstItem="nqe-L2-m2o" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="X3a-Gx-Fzv"/>
+                            <constraint firstItem="l6s-Fj-jby" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="ZeV-nh-Ab4"/>
+                            <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="l6s-Fj-jby" secondAttribute="trailing" constant="16" id="a1L-YI-KJh"/>
+                            <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="gS6-o3-Gao"/>
+                            <constraint firstAttribute="bottom" secondItem="l6s-Fj-jby" secondAttribute="bottom" id="l58-Od-V5V"/>
+                            <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="pDv-MA-OJC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Watching History" largeTitleDisplayMode="always" id="4pt-kk-HT1"/>
                     <connections>
@@ -343,21 +366,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9Q-M4-VBX">
-                                <rect key="frame" x="16" y="174" width="343" height="555"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9Q-M4-VBX">
+                                <rect key="frame" x="16" y="155.66666666666669" width="343" height="656.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JUDUL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdP-gh-cZn">
-                                <rect key="frame" x="16" y="87" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUDUL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdP-gh-cZn">
+                                <rect key="frame" x="16" y="85" width="343" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRU-hQ-33M">
-                                <rect key="frame" x="16" y="133" width="167" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRU-hQ-33M">
+                                <rect key="frame" x="16" y="125.66666666666669" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -365,6 +385,19 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cTZ-tm-lKM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cTZ-tm-lKM" firstAttribute="trailing" secondItem="NRU-hQ-33M" secondAttribute="trailing" constant="16" id="0V9-Ja-iUV"/>
+                            <constraint firstItem="NdP-gh-cZn" firstAttribute="top" secondItem="3ud-h8-kg8" secondAttribute="top" constant="85" id="NOa-Nt-2Y8"/>
+                            <constraint firstItem="NRU-hQ-33M" firstAttribute="top" secondItem="NdP-gh-cZn" secondAttribute="bottom" id="Vpk-vk-5nc"/>
+                            <constraint firstItem="R9Q-M4-VBX" firstAttribute="top" secondItem="NRU-hQ-33M" secondAttribute="bottom" constant="10" id="WOo-GJ-DA4"/>
+                            <constraint firstItem="NRU-hQ-33M" firstAttribute="leading" secondItem="cTZ-tm-lKM" secondAttribute="leading" constant="16" id="evU-7a-wlk"/>
+                            <constraint firstAttribute="trailing" secondItem="NdP-gh-cZn" secondAttribute="trailing" constant="16" id="gl0-mb-nt1"/>
+                            <constraint firstItem="R9Q-M4-VBX" firstAttribute="top" secondItem="NRU-hQ-33M" secondAttribute="bottom" constant="10" id="gnS-7J-4Er"/>
+                            <constraint firstItem="NdP-gh-cZn" firstAttribute="leading" secondItem="3ud-h8-kg8" secondAttribute="leading" constant="16" id="jFo-GN-xpl"/>
+                            <constraint firstItem="R9Q-M4-VBX" firstAttribute="bottom" secondItem="cTZ-tm-lKM" secondAttribute="bottom" constant="83" id="qdm-jP-sl2"/>
+                            <constraint firstItem="cTZ-tm-lKM" firstAttribute="trailing" secondItem="R9Q-M4-VBX" secondAttribute="trailing" constant="16" id="xWw-Ql-0Tm"/>
+                            <constraint firstItem="R9Q-M4-VBX" firstAttribute="leading" secondItem="cTZ-tm-lKM" secondAttribute="leading" constant="16" id="zho-xn-ftl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gbL-Ap-PX5"/>
                     <connections>
@@ -500,14 +533,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jru-Se-URO">
-                                <rect key="frame" x="16" y="187" width="343" height="542"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jru-Se-URO">
+                                <rect key="frame" x="16" y="138" width="343" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bed-7a-T9d">
-                                <rect key="frame" x="16" y="158" width="167" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your free time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bed-7a-T9d">
+                                <rect key="frame" x="16" y="108" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -515,8 +546,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KoO-Ka-9Dw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KoO-Ka-9Dw" firstAttribute="trailing" secondItem="jru-Se-URO" secondAttribute="trailing" constant="16" id="1Uw-dU-XEz"/>
+                            <constraint firstItem="bed-7a-T9d" firstAttribute="leading" secondItem="KoO-Ka-9Dw" secondAttribute="leading" constant="16" id="FJ6-H9-1dU"/>
+                            <constraint firstItem="jru-Se-URO" firstAttribute="leading" secondItem="KoO-Ka-9Dw" secondAttribute="leading" constant="16" id="H34-Vq-71q"/>
+                            <constraint firstItem="jru-Se-URO" firstAttribute="top" secondItem="bed-7a-T9d" secondAttribute="bottom" constant="10" id="WPm-pM-IxE"/>
+                            <constraint firstItem="bed-7a-T9d" firstAttribute="top" secondItem="KoO-Ka-9Dw" secondAttribute="top" constant="20" id="XBB-mP-FXn"/>
+                            <constraint firstItem="jru-Se-URO" firstAttribute="bottom" secondItem="KoO-Ka-9Dw" secondAttribute="bottom" constant="83" id="cuh-yl-KHR"/>
+                            <constraint firstItem="KoO-Ka-9Dw" firstAttribute="trailing" secondItem="bed-7a-T9d" secondAttribute="trailing" constant="16" id="dpf-Sa-nZh"/>
+                            <constraint firstItem="KoO-Ka-9Dw" firstAttribute="trailing" secondItem="jru-Se-URO" secondAttribute="trailing" constant="16" id="eoK-0P-uAD"/>
+                            <constraint firstAttribute="bottom" secondItem="jru-Se-URO" secondAttribute="bottom" id="eth-hp-kaa"/>
+                            <constraint firstItem="jru-Se-URO" firstAttribute="leading" secondItem="KoO-Ka-9Dw" secondAttribute="leading" constant="16" id="f2Y-ae-SPg"/>
+                            <constraint firstItem="jru-Se-URO" firstAttribute="top" secondItem="bed-7a-T9d" secondAttribute="bottom" constant="10" id="lMy-Ty-fKR"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="o0p-nj-yZm"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="o0p-nj-yZm"/>
                     <connections>
                         <outlet property="dateRecommendationTableView" destination="jru-Se-URO" id="gkH-04-7gK"/>
                         <segue destination="hI4-yS-eOn" kind="presentation" identifier="showForm" id="XPk-hR-Zgf"/>
