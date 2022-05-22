@@ -453,8 +453,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tiketMoton" translatesAutoresizingMaskIntoConstraints="NO" id="3DF-u2-1AI">
+                                <rect key="frame" x="-155" y="73" width="685" height="482"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53k-ks-uZv">
-                                <rect key="frame" x="61" y="189" width="253" height="294"/>
+                                <rect key="frame" x="71" y="234" width="234" height="309"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Title :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1E-U2-fXe">
@@ -486,7 +490,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O6I-lN-Tst"/>
@@ -622,6 +625,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty Watching Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEq-IO-gXb">
+                                <rect key="frame" x="71" y="39" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hv-DY-2Xa">
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                 <subviews>
@@ -679,6 +689,7 @@
                     <connections>
                         <outlet property="contentView" destination="9Hv-DY-2Xa" id="piu-fK-nIe"/>
                         <outlet property="dateDurationSchedule" destination="2ey-W0-ApO" id="Dq4-Fk-pHa"/>
+                        <outlet property="emptyTextLabel" destination="yEq-IO-gXb" id="VPb-sJ-7yj"/>
                         <outlet property="notesSchedule" destination="08a-Gq-fbi" id="I8Y-6D-QKV"/>
                         <outlet property="titleSchedule" destination="ZLC-mf-LVh" id="zae-Eu-ddl"/>
                     </connections>
@@ -695,6 +706,7 @@
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="tiketMoton" width="779" height="1439"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

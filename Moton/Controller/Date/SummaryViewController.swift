@@ -14,6 +14,7 @@ class SummaryViewController: UIViewController {
   @IBOutlet weak var notesSchedule: UILabel!
   @IBOutlet weak var dateDurationSchedule: UILabel!
   @IBOutlet weak var contentView: UIView!
+  @IBOutlet weak var emptyTextLabel: UILabel!
   var upCommingSchedule: Schedule?
   
   let eventStore = EKEventStore()
@@ -27,6 +28,16 @@ class SummaryViewController: UIViewController {
     notesSchedule.text = upCommingSchedule?.note
     dateDurationSchedule.text = "\(upCommingSchedule?.startDate.monthDayTimeText ?? "") - \(upCommingSchedule?.endDate.time ?? "")"
       contentView.layer.cornerRadius = 10
+    
+    let isUpCommingScheduleEmpty: Bool = upCommingSchedule == nil
+    
+    if isUpCommingScheduleEmpty {
+      contentView.isHidden = true
+      emptyTextLabel.isHidden = false
+    } else {
+      contentView.isHidden = false
+      emptyTextLabel.isHidden = true
+    }
   }
   
   func initUpComming() {
