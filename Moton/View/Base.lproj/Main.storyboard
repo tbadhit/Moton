@@ -454,7 +454,7 @@
             <objects>
                 <viewController id="qiZ-nY-aao" customClass="SummaryViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGd-af-mdb">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="135"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="135.33333333333334"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-7B-TOp">
@@ -595,7 +595,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V5l-Ua-GzK"/>
+        <segue reference="5HW-A5-nOi"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
