@@ -95,6 +95,16 @@ extension DateViewController: UITableViewDelegate {
       let controller = segue.destination as! DetailViewController
       controller.date = selectedDate
     }
+//      if let presentationController = segue.destination.popoverPresentationController { // 1
+//          segue.destination.preferredContentSize = CGSize(width: 300, height: 200)
+//          presentationController.delegate = self // 2
+//      }
   }
 }
 
+//extension DateViewController : UIPopoverPresentationControllerDelegate {
+//    func adaptivePresentationStyle(for controller: UIPresentationController,
+//                                   traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+//        return .none // 3
+//    }
+//}
