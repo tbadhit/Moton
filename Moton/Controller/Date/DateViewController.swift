@@ -73,10 +73,8 @@ extension DateViewController: UITableViewDataSource {
     
     cell.backgroundColor = UIColor.white
     cell.timeLabel.text = yearMonthDayString(date: date)
-//      cell.contentView.backgroundColor = UIColor.darkGray
-//      cell.timeLabel.textColor = UIColor.white
-      cell.containerView.layer.cornerRadius = 10
-      
+    cell.containerView.layer.cornerRadius = 10
+    
     return cell
   }
 }
@@ -86,8 +84,8 @@ extension DateViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-      selectedDate = dateRecommendation[indexPath.row]
-      performSegue(withIdentifier: "showDetail", sender: selectedDate)
+    selectedDate = dateRecommendation[indexPath.row]
+    performSegue(withIdentifier: "showDetail", sender: selectedDate)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

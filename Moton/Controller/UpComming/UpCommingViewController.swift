@@ -21,10 +21,10 @@ class UpCommingViewController: UIViewController, UITableViewDelegate {
     
     upCommingtableView.delegate = self
     upCommingtableView.dataSource = self
-    initDateRecom()
+    initUpCome()
   }
   
-  func initDateRecom() {
+  func initUpCome() {
     var calendar = Calendar(identifier: .gregorian)
     var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
     calendar.timeZone = TimeZone(secondsFromGMT: 0)!
@@ -72,7 +72,6 @@ extension UpCommingViewController: UITableViewDataSource {
     cell.titleUpComming.text = upComming.title
     cell.noteUpComming.text =  upComming.note
     cell.dateDurationUpComming.text = "\(upComming.startDate.monthDayTimeText) - \(upComming.endDate.time)"
-    cell.containerView.layer.cornerRadius = 10
       
     return cell
   }
