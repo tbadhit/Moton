@@ -21,23 +21,29 @@ class SummaryViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    initUpComming()
+    setUpViewData()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
     
     initUpComming()
+    setUpViewData()
     
-    titleSchedule.text = upCommingSchedule?.title
-    notesSchedule.text = upCommingSchedule?.note
-    dateDurationSchedule.text = "\(upCommingSchedule?.startDate.monthDayTimeText ?? "") - \(upCommingSchedule?.endDate.time ?? "")"
-      contentView.layer.cornerRadius = 10
-    
-    let isUpCommingScheduleEmpty: Bool = upCommingSchedule == nil
-    
-    if isUpCommingScheduleEmpty {
+    if upCommingSchedule == nil {
       contentView.isHidden = true
       emptyTextLabel.isHidden = false
     } else {
       contentView.isHidden = false
       emptyTextLabel.isHidden = true
     }
+  }
+  
+  func setUpViewData() {
+    titleSchedule.text = upCommingSchedule?.title
+    notesSchedule.text = upCommingSchedule?.note
+    dateDurationSchedule.text = "\(upCommingSchedule?.startDate.monthDayTimeText ?? "") - \(upCommingSchedule?.endDate.time ?? "")"
+    contentView.layer.cornerRadius = 10
   }
   
   func initUpComming() {

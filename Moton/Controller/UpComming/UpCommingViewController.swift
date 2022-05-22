@@ -63,6 +63,11 @@ class UpCommingViewController: UIViewController {
 
 extension UpCommingViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if upCommingList.count == 0 {
+      tableView.setEmptyMessage("You have no upcoming schedule,", "you need to schedule it first!")
+    } else {
+      tableView.restore()
+    }
     return upCommingList.count
   }
   

@@ -45,10 +45,10 @@ class DetailViewController: UIViewController {
     calendar.timeZone = TimeZone(secondsFromGMT: 0)!
     calendar.timeZone = TimeZone(abbreviation: localTimeZoneAbbreviation)!
     let startOfDate = calendar.startOfDay(for: date!) // 2022-05-19 00:00:00 +7000
-//    let endOfDate = Calendar.current.date(byAdding: .day, value: 1, to: startOfDate) // 2022-05-20 00:00:00 +0000
+    //    let endOfDate = Calendar.current.date(byAdding: .day, value: 1, to: startOfDate) // 2022-05-20 00:00:00 +0000
     
-//    let dateHourArray = Date.dateHours(from: startOfDate, to: endOfDate!)
-//    print(dateHourArray)
+    //    let dateHourArray = Date.dateHours(from: startOfDate, to: endOfDate!)
+    //    print(dateHourArray)
     
     //    for hour in dateHourArray {
     //      let startDate = hour
@@ -174,7 +174,7 @@ class DetailViewController: UIViewController {
           let startHour = Calendar.current.component(.hour, from: startLastHour!)
           let end = eventKitEvents.last?.endDate
           let endHour = Calendar.current.component(.hour, from: end!)
-         
+          
           if startHour <= 22 {
             
             let startFreeTime: Date = (eventKitEvents.last?.endDate)!// eventKitEvents[index - 1].endDate
@@ -185,7 +185,7 @@ class DetailViewController: UIViewController {
               dateRecomList.append(DateRecommendation(date: date, startTime: startFreeTime, endTime: endFreeTime, duration: duration))
             }
           } else if endHour < 22 {
-
+            
             let startFreeTime = event.endDate
             let endFreeTime = endDate
             let duration = getDuration(startDate: startFreeTime!, endDate: endFreeTime)
@@ -227,7 +227,8 @@ extension DetailViewController: UITableViewDataSource {
   // To return how many cell display
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if dateRecomList.count == 0 {
-      tableView.setEmptyMessage("Kosong")
+      
+      tableView.setEmptyMessage("You are busy,",  "There's no free time")
     } else {
       tableView.restore()
     }
@@ -255,27 +256,47 @@ extension DetailViewController: UITableViewDelegate {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showForm" {
-        let controller = segue.destination as! UINavigationController
-        let controllerTableView = controller.topViewController as! FormAddEventViewController
-        controllerTableView.dateRecommendation = selectedDateRecommendation
-        controllerTableView.reloadData = {
-          self.reloadData()
-        }
+      let controller = segue.destination as! UINavigationController
+      let controllerTableView = controller.topViewController as! FormAddEventViewController
+      controllerTableView.dateRecommendation = selectedDateRecommendation
+      controllerTableView.reloadData = {
+        self.reloadData()
+      }
     }
   }
 }
 
 extension UITableView {
-  func setEmptyMessage(_ message: String) {
-    let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-    messageLabel.text = message
-    messageLabel.textColor = .black
+  func setEmptyMessage(_ message1: String,_ message2: String) {
+    
+    let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+    
+    let titleLabel = UILabel()
+    let messageLabel = UILabel()
+    
+    titleLabel.translatesAutoresizingMaskIntoConstraints = false
+    messageLabel.translatesAutoresizingMaskIntoConstraints = false
+    titleLabel.textColor = UIColor.lightGray
+    titleLabel.font = UIFont(name: "SF-Pro", size: 17)
+    messageLabel.textColor = UIColor.lightGray
+    messageLabel.font = UIFont(name: "SF-Pro", size: 17)
+    
+    emptyView.addSubview(titleLabel)
+    emptyView.addSubview(messageLabel)
+    
+    titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
+    titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+    
+    messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+    messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
+    messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
+    
+    titleLabel.text = message1
+    messageLabel.text = message2
     messageLabel.numberOfLines = 0
     messageLabel.textAlignment = .center
-    messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
-    messageLabel.sizeToFit()
-    
-    self.backgroundView = messageLabel
+    // The only tricky part is here:
+    self.backgroundView = emptyView
     self.separatorStyle = .none
     
   }

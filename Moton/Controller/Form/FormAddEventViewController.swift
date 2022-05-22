@@ -36,26 +36,23 @@ class FormAddEventViewController: UITableViewController {
   }
   
   @IBAction func addData(_ sender: Any) {
-    eventStore.requestAccess(to: .event) { [self] success, error in
-      if success && error == nil {
-        let event: EKEvent = EKEvent(eventStore: self.eventStore)
-        
-        event.title = "Moton - \(self.titleField.text ?? "")"
-        event.notes = self.notesField.text
-        event.startDate = self.startTimePicker.date
-        event.endDate = self.endTimePicker.date
-        
-        event.calendar = self.eventStore.defaultCalendarForNewEvents
-        do {
-          try self.eventStore.save(event, span: .thisEvent)
-        } catch let error as NSError {
-          print("Failed to save event with error : \(error)")
-        }
-        
-        print("Saved event")
-      }
+    let event: EKEvent = EKEvent(eventStore: self.eventStore)
+    
+    event.title = "Moton - \(self.titleField.text ?? "")"
+    event.notes = self.notesField.text
+    event.startDate = self.startTimePicker.date
+    event.endDate = self.endTimePicker.date
+    event.addAlarm(EKAlarm(absoluteDate:  startTimePicker.date))
+    event.calendar = self.eventStore.defaultCalendarForNewEvents
+    do {
+      try self.eventStore.save(event, span: .thisEvent)
+    } catch let error as NSError {
+      print("Failed to save event with error : \(error)")
     }
+    
+    print("Saved event")
     self.dismiss(animated: true, completion: nil)
+    
   }
   
   override func viewDidDisappear(_ animated: Bool) {

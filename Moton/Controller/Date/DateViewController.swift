@@ -4,6 +4,7 @@
 //
 //  Created by Tubagus Adhitya Permana on 14/05/22.
 import UIKit
+import EventKit
 
 class DateViewController: UIViewController {
   
@@ -12,12 +13,15 @@ class DateViewController: UIViewController {
   var dateRecommendation: [Date] = []
   var selectedDate: Date?
   
+  let eventStore = EKEventStore()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpTable()
     dateRecomTableView.delegate = self
     dateRecomTableView.dataSource = self
     initDateRecommendation()
+    requestAccessCalendar()
   }
   
   func initDateRecommendation() {
@@ -38,6 +42,16 @@ class DateViewController: UIViewController {
     let date = Calendar.current.date(byAdding: .day, value: addDay, to: Date())
     
     return date!
+  }
+  
+  func requestAccessCalendar() {
+        eventStore.requestAccess(to: .event) { success, error in
+          if success && error == nil {
+            print("Success")
+          } else {
+            print("Error")
+          }
+        }
   }
   
   func yearMonthDayString(date: Date) -> String

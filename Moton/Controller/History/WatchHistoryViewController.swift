@@ -67,6 +67,11 @@ class WatchHistoryViewController: UIViewController {
 extension WatchHistoryViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if historyList.count == 0 {
+      tableView.setEmptyMessage("You haven't watch,", "you need to schedule it first!")
+    } else {
+      tableView.restore()
+    }
     return historyList.count
   }
   
