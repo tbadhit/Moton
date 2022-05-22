@@ -22,10 +22,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOw-bl-2BA">
-                        <rect key="frame" x="0.0" y="7" width="343" height="100"/>
+                        <rect key="frame" x="0.0" y="4" width="343" height="106"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upK-Ze-Ha8">
-                                <rect key="frame" x="8" y="0.0" width="327" height="100"/>
+                                <rect key="frame" x="8" y="0.0" width="327" height="106"/>
                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -37,14 +37,17 @@
                             <constraint firstAttribute="bottom" secondItem="upK-Ze-Ha8" secondAttribute="bottom" id="HqM-Gu-Ck5"/>
                             <constraint firstAttribute="trailing" secondItem="upK-Ze-Ha8" secondAttribute="trailing" constant="8" id="eEQ-zH-N0r"/>
                             <constraint firstItem="upK-Ze-Ha8" firstAttribute="top" secondItem="mOw-bl-2BA" secondAttribute="top" id="uCB-4t-gwN"/>
+                            <constraint firstAttribute="height" constant="106" id="wkZ-cI-0GJ"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="mOw-bl-2BA" secondAttribute="bottom" constant="4" id="0lG-k6-5Ko"/>
                     <constraint firstItem="mOw-bl-2BA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hTf-Fe-aGd"/>
-                    <constraint firstAttribute="bottom" secondItem="mOw-bl-2BA" secondAttribute="bottom" constant="7" id="j0K-Ju-Ed8"/>
+                    <constraint firstItem="mOw-bl-2BA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="hbA-Yi-Vzj"/>
+                    <constraint firstAttribute="bottom" secondItem="mOw-bl-2BA" secondAttribute="bottom" constant="4" id="j0K-Ju-Ed8"/>
                     <constraint firstAttribute="trailing" secondItem="mOw-bl-2BA" secondAttribute="trailing" id="kA5-1O-upX"/>
-                    <constraint firstItem="mOw-bl-2BA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="xln-Gq-DtS"/>
+                    <constraint firstItem="mOw-bl-2BA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="xln-Gq-DtS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -52,7 +55,7 @@
                 <outlet property="containerView" destination="mOw-bl-2BA" id="G1X-yE-dWG"/>
                 <outlet property="timeLabel" destination="upK-Ze-Ha8" id="2HX-yZ-zr9"/>
             </connections>
-            <point key="canvasLocation" x="270" y="71"/>
+            <point key="canvasLocation" x="268.84057971014494" y="70.982142857142847"/>
         </tableViewCell>
     </objects>
 </document>
