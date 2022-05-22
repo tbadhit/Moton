@@ -24,11 +24,14 @@ class WatchHistoryViewController: UIViewController {
     setUpTable()
     historyListTable.delegate = self
     historyListTable.dataSource = self
-    initDateRecom()
-    extendedLayoutIncludesOpaqueBars = true
+    initWatchHistory()
   }
   
-  func initDateRecom() {
+  override func viewWillAppear(_ animated: Bool) {
+    initWatchHistory()
+  }
+  
+  func initWatchHistory() {
     var calendar = Calendar(identifier: .gregorian)
     var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
     calendar.timeZone = TimeZone(secondsFromGMT: 0)!
@@ -46,9 +49,7 @@ class WatchHistoryViewController: UIViewController {
     }
     for event in eventKitEvents {
       historyList.append(Schedule(title: event.title, startDate: event.startDate, endDate: event.endDate, note: event.notes ?? "Note Empty"))
-      print(type(of: event.alarms?[1].relativeOffset))
     }
-    print(eventKitEvents)
   }
   
   func setDate(date: Date, addDay: Int) -> Date {
