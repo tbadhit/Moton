@@ -13,7 +13,9 @@ class DateRecommendationTableViewCell: UITableViewCell {
   
   @IBOutlet weak var timeLabel: UILabel!
   
-  override func awakeFromNib() {
+  @IBOutlet weak var containerView: UIView!
+    
+    override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
   }

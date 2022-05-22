@@ -52,7 +52,7 @@
                 <outlet property="containerView" destination="mOw-bl-2BA" id="G1X-yE-dWG"/>
                 <outlet property="timeLabel" destination="upK-Ze-Ha8" id="2HX-yZ-zr9"/>
             </connections>
-            <point key="canvasLocation" x="270" y="71"/>
+            <point key="canvasLocation" x="268.84057971014494" y="70.3125"/>
         </tableViewCell>
     </objects>
 </document>
