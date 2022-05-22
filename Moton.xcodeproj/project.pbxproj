@@ -27,12 +27,9 @@
 		16BF2D4B2838E3240012CA7C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D4A2838E3240012CA7C /* Const.swift */; };
 		4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */; };
 		4F8C31EE283938FE00DBD784 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */; };
-		4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F228315E2300CE6920 /* JournalViewController.swift */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
 		ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */; };
 		ADCFDA332837EF61008DE69B /* FormAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */; };
-		ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE680562832264600B734C9 /* JournalListTableViewCell.swift */; };
-		ADE680592832264600B734C9 /* JournalListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE680572832264600B734C9 /* JournalListTableViewCell.xib */; };
 		ADE68064283226E700B734C9 /* DateRecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */; };
 		ADE68065283226E700B734C9 /* DateRecommendationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -60,12 +57,9 @@
 		16BF2D4A2838E3240012CA7C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
-		4F9EA8F228315E2300CE6920 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
 		ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewatchDatePickerViewController.swift; sourceTree = "<group>"; };
 		ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAddEventViewController.swift; sourceTree = "<group>"; };
-		ADE680562832264600B734C9 /* JournalListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListTableViewCell.swift; sourceTree = "<group>"; };
-		ADE680572832264600B734C9 /* JournalListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalListTableViewCell.xib; sourceTree = "<group>"; };
 		ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendationTableViewCell.swift; sourceTree = "<group>"; };
 		ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateRecommendationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +113,6 @@
 			children = (
 				16BF2D422838A51D0012CA7C /* ScheduleTableViewCell.xib */,
 				16BF2D362837D0D40012CA7C /* DateTableViewCell.xib */,
-				ADE680572832264600B734C9 /* JournalListTableViewCell.xib */,
 				ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */,
 				1618D8D5282FF874009DC3AF /* Main.storyboard */,
 				1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */,
@@ -134,7 +127,6 @@
 				16BF2D402838A4EB0012CA7C /* UpComming */,
 				16BF2D3F283897F70012CA7C /* Detail */,
 				16247FC72832514900D885B3 /* Date */,
-				16247FC62832513D00D885B3 /* Journal */,
 				16247FC82832515C00D885B3 /* History */,
 				4F8C31DF28372BCC00DBD784 /* BackupViewController.swift */,
 			);
@@ -158,15 +150,6 @@
 				1618D8D1282FF874009DC3AF /* SceneDelegate.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		16247FC62832513D00D885B3 /* Journal */ = {
-			isa = PBXGroup;
-			children = (
-				4F9EA8F228315E2300CE6920 /* JournalViewController.swift */,
-				ADE680562832264600B734C9 /* JournalListTableViewCell.swift */,
-			);
-			path = Journal;
 			sourceTree = "<group>";
 		};
 		16247FC72832514900D885B3 /* Date */ = {
@@ -297,7 +280,6 @@
 			files = (
 				16BF2D442838A51D0012CA7C /* ScheduleTableViewCell.xib in Resources */,
 				16BF2D382837D0D40012CA7C /* DateTableViewCell.xib in Resources */,
-				ADE680592832264600B734C9 /* JournalListTableViewCell.xib in Resources */,
 				1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */,
 				ADE68065283226E700B734C9 /* DateRecommendationTableViewCell.xib in Resources */,
 				4F8C31EE283938FE00DBD784 /* SF-Pro.ttf in Resources */,
@@ -323,7 +305,6 @@
 				4F8C31E028372BCC00DBD784 /* BackupViewController.swift in Sources */,
 				16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
-				ADE680582832264600B734C9 /* JournalListTableViewCell.swift in Sources */,
 				16BF2D342837CE240012CA7C /* SummaryViewController.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
 				16BF2D3D283881640012CA7C /* DetailViewController.swift in Sources */,
@@ -332,7 +313,6 @@
 				ADE68064283226E700B734C9 /* DateRecommendationTableViewCell.swift in Sources */,
 				16BF2D372837D0D40012CA7C /* DateTableViewCell.swift in Sources */,
 				16247FCC2832843B00D885B3 /* Date+Moton.swift in Sources */,
-				4F9EA8F328315E2300CE6920 /* JournalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

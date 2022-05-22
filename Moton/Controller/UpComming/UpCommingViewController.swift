@@ -56,7 +56,7 @@ class UpCommingViewController: UIViewController, UITableViewDelegate {
   }
   
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 90.0
+    return 112.0
   }
 }
 

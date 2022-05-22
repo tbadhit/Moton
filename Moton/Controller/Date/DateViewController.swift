@@ -73,7 +73,7 @@ extension DateViewController: UITableViewDataSource {
     
     cell.backgroundColor = UIColor.white
     cell.timeLabel.text = yearMonthDayString(date: date)
-//      cell.contentView.backgroundColor = UIColor.darkGray
+      cell.contentView.backgroundColor = UIColor.white
 //      cell.timeLabel.textColor = UIColor.white
       cell.containerView.layer.cornerRadius = 10
       
