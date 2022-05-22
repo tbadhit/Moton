@@ -219,7 +219,7 @@ class DetailViewController: UIViewController {
   }
   
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 90.0
+    return 100.0
   }
 }
 
@@ -234,7 +234,7 @@ extension DetailViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: dateRecommendationTableViewCellId,for: indexPath) as! DateRecommendationTableViewCell
     let dateItem = dateRecomList[indexPath.row]
     
-    cell.dateLabel.text = "\(dateItem.duration)"
+    cell.dateLabel.text = "Total Duration: \(dateItem.duration) hours"
     cell.timeLabel.text = "\(dateItem.startTime.time) - \(dateItem.endTime.time)"
     cell.containerView.layer.cornerRadius = 10
     return cell

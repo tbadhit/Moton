@@ -56,7 +56,7 @@ class UpCommingViewController: UIViewController, UITableViewDelegate {
   }
   
   func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 90.0
+    return 112.0
   }
 }
 
@@ -72,6 +72,7 @@ extension UpCommingViewController: UITableViewDataSource {
     cell.titleUpComming.text = upComming.title
     cell.noteUpComming.text =  upComming.note
     cell.dateDurationUpComming.text = "\(upComming.startDate.monthDayTimeText) - \(upComming.endDate.time)"
+      cell.containerView.layer.cornerRadius = 10
       
     return cell
   }
