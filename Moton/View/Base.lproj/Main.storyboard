@@ -268,39 +268,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Fj-jby">
-                                <rect key="frame" x="16" y="171" width="343" height="641"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="SAP-Aj-flh"/>
-                                </constraints>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh your moment by re-watching movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-L2-m2o">
                                 <rect key="frame" x="16" y="140" width="343" height="21"/>
                                 <fontDescription key="fontDescription" name="SFPro-Light" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Fj-jby">
+                                <rect key="frame" x="16" y="171" width="343" height="558"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="SAP-Aj-flh"/>
+                                </constraints>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z9z-va-zIC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nqe-L2-m2o" firstAttribute="top" secondItem="Z9z-va-zIC" secondAttribute="top" id="0Yj-5T-Wll"/>
-                            <constraint firstAttribute="bottom" secondItem="l6s-Fj-jby" secondAttribute="bottom" id="9wm-V3-CR6"/>
                             <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="nqe-L2-m2o" secondAttribute="trailing" constant="16" id="AH1-f5-TvN"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="GYy-1Z-La1"/>
                             <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="l6s-Fj-jby" secondAttribute="trailing" constant="16" id="Q2c-i2-8L2"/>
                             <constraint firstItem="nqe-L2-m2o" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="X3a-Gx-Fzv"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="ZeV-nh-Ab4"/>
                             <constraint firstItem="Z9z-va-zIC" firstAttribute="trailing" secondItem="l6s-Fj-jby" secondAttribute="trailing" constant="16" id="a1L-YI-KJh"/>
+                            <constraint firstItem="Z9z-va-zIC" firstAttribute="bottom" secondItem="l6s-Fj-jby" secondAttribute="bottom" id="agg-H5-3a4"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="leading" secondItem="Z9z-va-zIC" secondAttribute="leading" constant="16" id="ece-qG-1DX"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="gS6-o3-Gao"/>
-                            <constraint firstAttribute="bottom" secondItem="l6s-Fj-jby" secondAttribute="bottom" id="l58-Od-V5V"/>
                             <constraint firstItem="l6s-Fj-jby" firstAttribute="top" secondItem="nqe-L2-m2o" secondAttribute="bottom" constant="10" id="pDv-MA-OJC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Watching History" largeTitleDisplayMode="always" id="4pt-kk-HT1"/>
+                    <navigationItem key="navigationItem" title="Watching History" largeTitleDisplayMode="always" id="SVQ-dd-L9S"/>
                     <connections>
                         <outlet property="historyListTable" destination="l6s-Fj-jby" id="ul3-r6-skR"/>
                         <segue destination="RcP-rP-q3p" kind="show" identifier="showRewatchDate" id="3O3-yV-TYm"/>
@@ -313,13 +312,13 @@
         <!--Rewatch Date Picker View Controller-->
         <scene sceneID="39g-Xz-uR7">
             <objects>
-                <viewController id="RcP-rP-q3p" customClass="RewatchDatePickerViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="RcP-rP-q3p" customClass="RewatchDatePickerViewController" customModule="Moton" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ud-h8-kg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9Q-M4-VBX">
-                                <rect key="frame" x="16" y="155.66666666666669" width="343" height="656.33333333333326"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9Q-M4-VBX">
+                                <rect key="frame" x="16" y="155.66666666666669" width="343" height="622.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUDUL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdP-gh-cZn">
@@ -342,16 +341,15 @@
                             <constraint firstItem="NdP-gh-cZn" firstAttribute="top" secondItem="3ud-h8-kg8" secondAttribute="top" constant="85" id="NOa-Nt-2Y8"/>
                             <constraint firstItem="NRU-hQ-33M" firstAttribute="top" secondItem="NdP-gh-cZn" secondAttribute="bottom" id="Vpk-vk-5nc"/>
                             <constraint firstItem="R9Q-M4-VBX" firstAttribute="top" secondItem="NRU-hQ-33M" secondAttribute="bottom" constant="10" id="WOo-GJ-DA4"/>
+                            <constraint firstItem="cTZ-tm-lKM" firstAttribute="bottom" secondItem="R9Q-M4-VBX" secondAttribute="bottom" id="bjS-6D-TKm"/>
                             <constraint firstItem="NRU-hQ-33M" firstAttribute="leading" secondItem="cTZ-tm-lKM" secondAttribute="leading" constant="16" id="evU-7a-wlk"/>
                             <constraint firstAttribute="trailing" secondItem="NdP-gh-cZn" secondAttribute="trailing" constant="16" id="gl0-mb-nt1"/>
-                            <constraint firstItem="R9Q-M4-VBX" firstAttribute="top" secondItem="NRU-hQ-33M" secondAttribute="bottom" constant="10" id="gnS-7J-4Er"/>
                             <constraint firstItem="NdP-gh-cZn" firstAttribute="leading" secondItem="3ud-h8-kg8" secondAttribute="leading" constant="16" id="jFo-GN-xpl"/>
-                            <constraint firstItem="R9Q-M4-VBX" firstAttribute="bottom" secondItem="cTZ-tm-lKM" secondAttribute="bottom" constant="83" id="qdm-jP-sl2"/>
                             <constraint firstItem="cTZ-tm-lKM" firstAttribute="trailing" secondItem="R9Q-M4-VBX" secondAttribute="trailing" constant="16" id="xWw-Ql-0Tm"/>
                             <constraint firstItem="R9Q-M4-VBX" firstAttribute="leading" secondItem="cTZ-tm-lKM" secondAttribute="leading" constant="16" id="zho-xn-ftl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gbL-Ap-PX5"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="gbL-Ap-PX5"/>
                     <connections>
                         <outlet property="dateTableView" destination="R9Q-M4-VBX" id="QK5-an-mUe"/>
                         <outlet property="titleLabel" destination="NdP-gh-cZn" id="8qk-oV-eeY"/>
@@ -372,8 +370,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="selectedImageTintColor" red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="pX0-pR-CBq" kind="relationship" relationship="viewControllers" id="gjT-S0-zRq"/>
@@ -391,31 +389,31 @@
                     <tabBarItem key="tabBarItem" title="Date" id="Ua5-wS-pWW">
                         <imageReference key="image" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="landscapeImage" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="largeContentSizeImage" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
                         </imageReference>
-                        <color key="badgeColor" red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <imageReference key="selectedImage" image="calendar" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
@@ -441,27 +439,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="343" height="135.33333333333334"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-7B-TOp">
-                                <rect key="frame" x="16" y="15" width="311" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thb-Z9-lS4">
+                                <rect key="frame" x="0.0" y="15" width="343" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-Vk-L6y">
-                                <rect key="frame" x="16" y="44" width="311" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date - End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-BN-Aho">
-                                <rect key="frame" x="16" y="73" width="311" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-Vk-L6y">
+                                        <rect key="frame" x="16" y="40" width="311" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-7B-TOp">
+                                        <rect key="frame" x="16" y="11" width="311" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date - End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-BN-Aho">
+                                        <rect key="frame" x="16" y="69" width="311" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mkg-af-RmN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -474,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Frw-Yr-zy7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3503.1999999999998" y="1353.3251231527095"/>
+            <point key="canvasLocation" x="3503.1999999999998" y="1352.9556650246307"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="cME-ig-8Zk">
@@ -546,31 +551,31 @@
                     <tabBarItem key="tabBarItem" title="Watch History" id="v8d-M4-j4V">
                         <imageReference key="image" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="landscapeImage" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </hierarchicalColors>
                         </imageReference>
                         <imageReference key="largeContentSizeImage" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </hierarchicalColors>
                         </imageReference>
-                        <color key="badgeColor" red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <imageReference key="selectedImage" image="clock" catalog="system" symbolScale="medium" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.50980395079999996" green="0.12549020350000001" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>

@@ -25,6 +25,7 @@ class WatchHistoryViewController: UIViewController {
     historyListTable.delegate = self
     historyListTable.dataSource = self
     initDateRecom()
+    extendedLayoutIncludesOpaqueBars = true
   }
   
   func initDateRecom() {
@@ -60,10 +61,6 @@ class WatchHistoryViewController: UIViewController {
     let nibScheduleList = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
     
     historyListTable.register(nibScheduleList, forCellReuseIdentifier: scheduleTableViewCellId)
-  }
-  
-  func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      return 112.0
   }
 }
 
