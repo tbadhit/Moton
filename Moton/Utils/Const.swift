@@ -5,7 +5,7 @@
 //  Created by Tubagus Adhitya Permana on 21/05/22.
 //
 
-import Foundation
+//import Foundation
 
 let scheduleTableViewCellId = "ScheduleCell"
 let dateTableViewCellId = "DateCell"

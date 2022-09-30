@@ -7,101 +7,86 @@
 
 import UIKit
 import EventKit
+import RxSwift
 
 class UpCommingViewController: UIViewController {
-  
-  @IBOutlet weak var upCommingtableView: UITableView!
-  var upCommingList: [Schedule] = []
-  var selectedMovieTitle: String?
-  var selectedNotes : String?
-  let eventStore = EKEventStore()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setUpTable()
     
-    upCommingtableView.delegate = self
-    upCommingtableView.dataSource = self
-    initUpCome()
-  }
-  
-  func initUpCome() {
-    var calendar = Calendar(identifier: .gregorian)
-    var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
-    calendar.timeZone = TimeZone(secondsFromGMT: 0)!
-    calendar.timeZone = TimeZone(abbreviation: localTimeZoneAbbreviation)!
-    let today = calendar.startOfDay(for: Date())
+    @IBOutlet weak var upCommingtableView: UITableView!
+    var selectedMovieTitle: String?
+    var selectedNotes : String?
     
-    let startDate = setDate(date: today, addDay: 0)
-    let endDate = setDate(date: today, addDay: 6)
+    let viewModel = UpCommingViewModel()
+    let bag = DisposeBag()
     
-    let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
-    let eventKitEvents = eventStore.events(matching: predicate).filter({ event in
-      event.title.hasPrefix("Moton")
-    })
-    for event in eventKitEvents {
-      upCommingList.append(Schedule(title: event.title, startDate: event.startDate, endDate: event.endDate, note: event.notes ?? "Note Empty"))
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        upCommingtableView.rx.setDelegate(self).disposed(by: bag)
+        bindTableView()
+        setupCellTapHandling()
     }
-    print(eventKitEvents)
-  }
-  
-  func setDate(date: Date, addDay: Int) -> Date {
-    let date = Calendar.current.date(byAdding: .day, value: addDay, to: Date())
     
-    return date!
-  }
-  
-  func setUpTable () {
-    let nibDateRecommendation = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
-    upCommingtableView.register(nibDateRecommendation, forCellReuseIdentifier: scheduleTableViewCellId)
-  }
-  
-  func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 112.0
-  }
-}
-
-extension UpCommingViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if upCommingList.count == 0 {
-      tableView.setEmptyMessage("You have no upcoming schedule,", "you need to schedule it first!")
-    } else {
-      tableView.restore()
+    func bindTableView () {
+        let nibDateRecommendation = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
+        upCommingtableView.register(nibDateRecommendation, forCellReuseIdentifier: scheduleTableViewCellId)
+        
+            viewModel.listUpComming.bind(to: upCommingtableView.rx.items(cellIdentifier: scheduleTableViewCellId, cellType: ScheduleTableViewCell.self)) {
+                (row, item, cell) in
+                cell.setCellWithValueOf(item)
+            }.disposed(by: bag)
+        
+        viewModel.fetchUpComming()
     }
-    return upCommingList.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let upComming = upCommingList[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellId,for: indexPath) as! ScheduleTableViewCell
     
-    cell.titleUpComming.text = upComming.title.components(separatedBy: "Moton - ")[1]
-    cell.noteUpComming.text =  upComming.note
-    cell.dateDurationUpComming.text = "\(upComming.startDate.monthDayTimeText) - \(upComming.endDate.time)"
-      cell.containerView.layer.cornerRadius = 10
-      
-    return cell
-  }
-   
+    func setupCellTapHandling() {
+        upCommingtableView.rx.modelSelected(Schedule.self).subscribe(onNext: {item in
+            self.selectedMovieTitle = item.title
+            self.selectedNotes = item.note
+            self.performSegue(withIdentifier: "showTitleDetail", sender: self.selectedMovieTitle)
+        }).disposed(by: bag)
+    }
 }
+//
+//extension UpCommingViewController: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if upCommingList.count == 0 {
+//            tableView.setEmptyMessage("You have no upcoming schedule,", "you need to schedule it first!")
+//        } else {
+//            tableView.restore()
+//        }
+//        return upCommingList.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        if let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellId, for: indexPath) as? ScheduleTableViewCell {
+//            let upComming = upCommingList[indexPath.row]
+//            cell.setCellWithValueOf(upComming)
+//            return cell
+//        } else {
+//            return UITableViewCell()
+//        }
+//    }
+//
+//}
 
 extension UpCommingViewController : UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedMovieTitle = upCommingList[indexPath.row].title
-        selectedNotes = upCommingList[indexPath.row].note
-        performSegue(withIdentifier: "showTitleDetail", sender: selectedMovieTitle)
+    func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 112.0
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        selectedMovieTitle = upCommingList[indexPath.row].title
+//        selectedNotes = upCommingList[indexPath.row].note
+//        performSegue(withIdentifier: "showTitleDetail", sender: selectedMovieTitle)
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTitleDetail" {
-
-        let controller = segue.destination as! ShowTitleViewController
-
-
-        controller.movieTitle = selectedMovieTitle?.components(separatedBy: "Moton - ")[1]
-        controller.notes = selectedNotes
-
-                
+            
+            let controller = segue.destination as! ShowTitleViewController
+            
+            controller.movieTitle = selectedMovieTitle?.components(separatedBy: "Moton - ")[1]
+            controller.notes = selectedNotes
             
         }
     }

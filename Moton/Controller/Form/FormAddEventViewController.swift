@@ -10,7 +10,7 @@ import EventKit
 
 class FormAddEventViewController: UITableViewController {
   
-  var dateRecommendation: DateRecommendation?
+  var dateRecommendation: FreeTime?
   var reloadData: (() -> Void)?
   var movieTitle : String?
   
@@ -25,14 +25,19 @@ class FormAddEventViewController: UITableViewController {
     super.viewDidLoad()
     
     titleField.text = ""
+      
+      guard let dateRecommendation = dateRecommendation else {
+          return
+      }
+
     
-    startTimePicker.date = dateRecommendation!.startTime
-    endTimePicker.date = dateRecommendation!.endTime
+    startTimePicker.date = dateRecommendation.startTime
+    endTimePicker.date = dateRecommendation.endTime
     
-    startTimePicker.minimumDate = dateRecommendation!.startTime
-    startTimePicker.maximumDate = dateRecommendation!.endTime
-    endTimePicker.minimumDate = dateRecommendation!.startTime
-    endTimePicker.maximumDate = dateRecommendation!.endTime
+    startTimePicker.minimumDate = dateRecommendation.startTime
+    startTimePicker.maximumDate = dateRecommendation.endTime
+    endTimePicker.minimumDate = dateRecommendation.startTime
+    endTimePicker.maximumDate = dateRecommendation.endTime
   }
   
   @IBAction func addData(_ sender: Any) {

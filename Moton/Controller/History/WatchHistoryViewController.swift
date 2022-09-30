@@ -7,93 +7,75 @@
 
 import UIKit
 import EventKit
+import RxSwift
 
 class WatchHistoryViewController: UIViewController {
-  
-  @IBOutlet weak var historyListTable: UITableView!
-  
-  let eventStore = EKEventStore()
-  
-  var historyList: [Schedule] = []
     
-  var selectedMovieTitle: String?
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    @IBOutlet weak var historyListTable: UITableView!
     
-    setUpTable()
-    historyListTable.delegate = self
-    historyListTable.dataSource = self
-    initWatchHistory()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
+    var historyList: [Schedule] = []
+    var selectedMovieTitle: String?
+    let viewModel = WatchHistoryViewModel()
+    let bag = DisposeBag()
     
-  }
-  
-  func initWatchHistory() {
-    var calendar = Calendar(identifier: .gregorian)
-    var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
-    calendar.timeZone = TimeZone(secondsFromGMT: 0)!
-    calendar.timeZone = TimeZone(abbreviation: localTimeZoneAbbreviation)!
-    let today = calendar.startOfDay(for: Date())
-    
-    let startDate = setDate(date: today, addDay: -6)
-    let endDate = setDate(date: today, addDay: 0)
-    
-    let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
-    let eventKitEvents = eventStore.events(matching: predicate).filter({ event in
-      event.title.hasPrefix("Moton")
-    }).filter { event in
-      event.startDate < Date.now
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        historyListTable.rx.setDelegate(self).disposed(by: bag)
+        bindTableView()
+        setupCellTapHandling()
     }
-    for event in eventKitEvents {
-      historyList.append(Schedule(title: event.title, startDate: event.startDate, endDate: event.endDate, note: event.notes ?? "Note Empty"))
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchWatchHistory()
     }
-  }
-  
-  func setDate(date: Date, addDay: Int) -> Date {
-    let date = Calendar.current.date(byAdding: .day, value: addDay, to: Date())
     
-    return date!
-  }
-  
-  func setUpTable() {
-    let nibScheduleList = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
+    func bindTableView() {
+        let nibSchedule = UINib(nibName: "ScheduleTableViewCell", bundle: nil)
+        historyListTable.register(nibSchedule, forCellReuseIdentifier: scheduleTableViewCellId)
+        viewModel.listWatchHistory.bind(to: historyListTable.rx.items(cellIdentifier: scheduleTableViewCellId, cellType: ScheduleTableViewCell.self)) {
+            (row, item, cell) in
+            cell.setCellWithValueOf(item)
+        }.disposed(by: bag)
+        
+        
+        viewModel.fetchWatchHistory()
+    }
     
-    historyListTable.register(nibScheduleList, forCellReuseIdentifier: scheduleTableViewCellId)
-  }
+    func setupCellTapHandling() {
+        historyListTable.rx.modelSelected(Schedule.self).subscribe(onNext: { item
+            in
+            self.selectedMovieTitle = item.title
+            self.performSegue(withIdentifier: "showRewatchDate", sender: nil)
+        }).disposed(by: bag)
+    }
 }
 
-extension WatchHistoryViewController: UITableViewDataSource {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if historyList.count == 0 {
-      tableView.setEmptyMessage("You haven't watch,", "you need to schedule it first!")
-    } else {
-      tableView.restore()
-    }
-    return historyList.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let upComming = historyList[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellId,for: indexPath) as! ScheduleTableViewCell
-    
-    cell.titleUpComming.text = upComming.title
-    cell.noteUpComming.text =  upComming.note
-    cell.dateDurationUpComming.text = "\(upComming.startDate.monthDayTimeText) - \(upComming.endDate.time)"
-    cell.containerView.layer.cornerRadius = 10
-    return cell
-  }
-}
+//extension WatchHistoryViewController: UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if historyList.count == 0 {
+//            tableView.setEmptyMessage("You haven't watch,", "you need to schedule it first!")
+//        } else {
+//            tableView.restore()
+//        }
+//        return historyList.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellId, for: indexPath) as? ScheduleTableViewCell {
+//            let history = historyList[indexPath.row]
+//            cell.setCellWithValueOf(history)
+//            return cell
+//        } else {
+//            return UITableViewCell()
+//        }
+//    }
+//}
 
 extension WatchHistoryViewController : UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedMovieTitle = historyList[indexPath.row].title
-        performSegue(withIdentifier: "showRewatchDate", sender: nil)
-        print("YESS")
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRewatchDate" {
             let controller = segue.destination as! RewatchDatePickerViewController

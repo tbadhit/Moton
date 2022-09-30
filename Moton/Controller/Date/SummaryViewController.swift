@@ -40,7 +40,7 @@ class SummaryViewController: UIViewController {
   }
   
   func setUpViewData() {
-    titleSchedule.text = upCommingSchedule?.title
+    titleSchedule.text = upCommingSchedule?.title.components(separatedBy: "Moton - ")[1]
     notesSchedule.text = upCommingSchedule?.note
     dateDurationSchedule.text = "\(upCommingSchedule?.startDate.monthDayTimeText ?? "") - \(upCommingSchedule?.endDate.time ?? "")"
     contentView.layer.cornerRadius = 10
@@ -59,7 +59,9 @@ class SummaryViewController: UIViewController {
     let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
     let eventKitEvents = eventStore.events(matching: predicate).filter({ event in
       event.title.hasPrefix("Moton")
-    })
+    }).filter { event in
+      event.startDate > Date.now
+    }
     
     let event = eventKitEvents.first
     

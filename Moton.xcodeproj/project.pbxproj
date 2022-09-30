@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160219D728E2167100B0CF72 /* FreeTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160219D628E2167100B0CF72 /* FreeTimeViewModel.swift */; };
+		160219D928E4B17700B0CF72 /* WatchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160219D828E4B17700B0CF72 /* WatchHistoryViewModel.swift */; };
+		160219DB28E6C6C600B0CF72 /* RewatchDatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160219DA28E6C6C600B0CF72 /* RewatchDatePickerViewModel.swift */; };
+		160219DD28E6C96700B0CF72 /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160219DC28E6C96700B0CF72 /* DateViewModel.swift */; };
+		160219DF28E6CB3200B0CF72 /* UpCommingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160219DE28E6CB3200B0CF72 /* UpCommingViewModel.swift */; };
 		1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8CF282FF874009DC3AF /* AppDelegate.swift */; };
 		1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8D1282FF874009DC3AF /* SceneDelegate.swift */; };
 		1618D8D4282FF874009DC3AF /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618D8D3282FF874009DC3AF /* DateViewController.swift */; };
@@ -15,8 +20,10 @@
 		1618D8DC282FF876009DC3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DB282FF876009DC3AF /* Assets.xcassets */; };
 		1618D8DF282FF876009DC3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */; };
 		16247FCA2832527100D885B3 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FC92832527100D885B3 /* Schedule.swift */; };
-		16247FCC2832843B00D885B3 /* Date+Moton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FCB2832843B00D885B3 /* Date+Moton.swift */; };
-		163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BC66228354E06009CFBD8 /* DateRecommendation.swift */; };
+		16247FCC2832843B00D885B3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16247FCB2832843B00D885B3 /* Date+Ext.swift */; };
+		163BC66328354E06009CFBD8 /* FreeTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BC66228354E06009CFBD8 /* FreeTime.swift */; };
+		163BFBB728C39477009282EE /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BFBB628C39477009282EE /* UITableView+Ext.swift */; };
+		163BFBB928C3A0FD009282EE /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BFBB828C3A0FD009282EE /* EventStore.swift */; };
 		16BF2D342837CE240012CA7C /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D332837CE240012CA7C /* SummaryViewController.swift */; };
 		16BF2D372837D0D40012CA7C /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D352837D0D40012CA7C /* DateTableViewCell.swift */; };
 		16BF2D382837D0D40012CA7C /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BF2D362837D0D40012CA7C /* DateTableViewCell.xib */; };
@@ -27,6 +34,7 @@
 		16BF2D4B2838E3240012CA7C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF2D4A2838E3240012CA7C /* Const.swift */; };
 		4F8C31EE283938FE00DBD784 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */; };
 		4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */; };
+		8EF4EEB9019CC6F2DC85D075 /* Pods_Moton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2231CCE1A488BC41B0BD4167 /* Pods_Moton.framework */; };
 		AD8F18F2283A02150045434F /* ShowTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F18F1283A02150045434F /* ShowTitleViewController.swift */; };
 		ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */; };
 		ADCFDA332837EF61008DE69B /* FormAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */; };
@@ -35,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160219D628E2167100B0CF72 /* FreeTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeViewModel.swift; sourceTree = "<group>"; };
+		160219D828E4B17700B0CF72 /* WatchHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewModel.swift; sourceTree = "<group>"; };
+		160219DA28E6C6C600B0CF72 /* RewatchDatePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewatchDatePickerViewModel.swift; sourceTree = "<group>"; };
+		160219DC28E6C96700B0CF72 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		160219DE28E6CB3200B0CF72 /* UpCommingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingViewModel.swift; sourceTree = "<group>"; };
 		1618D8CC282FF874009DC3AF /* Moton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1618D8CF282FF874009DC3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1618D8D1282FF874009DC3AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,8 +58,10 @@
 		1618D8DE282FF876009DC3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1618D8E0282FF876009DC3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16247FC92832527100D885B3 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		16247FCB2832843B00D885B3 /* Date+Moton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Moton.swift"; sourceTree = "<group>"; };
-		163BC66228354E06009CFBD8 /* DateRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendation.swift; sourceTree = "<group>"; };
+		16247FCB2832843B00D885B3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		163BC66228354E06009CFBD8 /* FreeTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTime.swift; sourceTree = "<group>"; };
+		163BFBB628C39477009282EE /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		163BFBB828C3A0FD009282EE /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		16BF2D332837CE240012CA7C /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		16BF2D352837D0D40012CA7C /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		16BF2D362837D0D40012CA7C /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
@@ -55,13 +70,16 @@
 		16BF2D422838A51D0012CA7C /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		16BF2D452838A53D0012CA7C /* UpCommingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingViewController.swift; sourceTree = "<group>"; };
 		16BF2D4A2838E3240012CA7C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		2231CCE1A488BC41B0BD4167 /* Pods_Moton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8C31ED283938EA00DBD784 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		4F9EA8F428315E3300CE6920 /* WatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryViewController.swift; sourceTree = "<group>"; };
+		530770CDA5658F4C767E742E /* Pods-Moton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moton.debug.xcconfig"; path = "Target Support Files/Pods-Moton/Pods-Moton.debug.xcconfig"; sourceTree = "<group>"; };
 		AD8F18F1283A02150045434F /* ShowTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTitleViewController.swift; sourceTree = "<group>"; };
 		ADAD491628391A1D00A6D981 /* RewatchDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewatchDatePickerViewController.swift; sourceTree = "<group>"; };
 		ADCFDA322837EF61008DE69B /* FormAddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAddEventViewController.swift; sourceTree = "<group>"; };
 		ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRecommendationTableViewCell.swift; sourceTree = "<group>"; };
 		ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateRecommendationTableViewCell.xib; sourceTree = "<group>"; };
+		C2926506F12DA6676101A424 /* Pods-Moton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moton.release.xcconfig"; path = "Target Support Files/Pods-Moton/Pods-Moton.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +87,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF4EEB9019CC6F2DC85D075 /* Pods_Moton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160219D528E2165500B0CF72 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				160219D628E2167100B0CF72 /* FreeTimeViewModel.swift */,
+				160219D828E4B17700B0CF72 /* WatchHistoryViewModel.swift */,
+				160219DA28E6C6C600B0CF72 /* RewatchDatePickerViewModel.swift */,
+				160219DC28E6C96700B0CF72 /* DateViewModel.swift */,
+				160219DE28E6CB3200B0CF72 /* UpCommingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1618D8C3282FF874009DC3AF = {
 			isa = PBXGroup;
 			children = (
 				1618D8CE282FF874009DC3AF /* Moton */,
 				1618D8CD282FF874009DC3AF /* Products */,
+				D0FAE02802D81FE96D555F5C /* Pods */,
+				C50BB177BC199D6B7A343EFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +127,8 @@
 		1618D8CE282FF874009DC3AF /* Moton */ = {
 			isa = PBXGroup;
 			children = (
+				160219D528E2165500B0CF72 /* ViewModel */,
 				16BF2D492838E3130012CA7C /* Utils */,
-				16BF2D482838D6CD0012CA7C /* Cell */,
 				16247FC5283250FD00D885B3 /* Base */,
 				16247FC4283250F100D885B3 /* Model */,
 				16247FC3283250E900D885B3 /* Controller */,
@@ -111,8 +144,11 @@
 		16247FC2283250E000D885B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				16BF2D412838A51D0012CA7C /* ScheduleTableViewCell.swift */,
 				16BF2D422838A51D0012CA7C /* ScheduleTableViewCell.xib */,
+				16BF2D352837D0D40012CA7C /* DateTableViewCell.swift */,
 				16BF2D362837D0D40012CA7C /* DateTableViewCell.xib */,
+				ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */,
 				ADE68063283226E700B734C9 /* DateRecommendationTableViewCell.xib */,
 				1618D8D5282FF874009DC3AF /* Main.storyboard */,
 				1618D8DD282FF876009DC3AF /* LaunchScreen.storyboard */,
@@ -136,8 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				16247FC92832527100D885B3 /* Schedule.swift */,
-				16247FCB2832843B00D885B3 /* Date+Moton.swift */,
-				163BC66228354E06009CFBD8 /* DateRecommendation.swift */,
+				163BC66228354E06009CFBD8 /* FreeTime.swift */,
+				163BFBB828C3A0FD009282EE /* EventStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,7 +190,6 @@
 		16247FC72832514900D885B3 /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				16BF2D3E283892A50012CA7C /* Cell */,
 				1618D8D3282FF874009DC3AF /* DateViewController.swift */,
 				16BF2D332837CE240012CA7C /* SummaryViewController.swift */,
 			);
@@ -170,19 +205,10 @@
 			path = History;
 			sourceTree = "<group>";
 		};
-		16BF2D3E283892A50012CA7C /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				16BF2D352837D0D40012CA7C /* DateTableViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		16BF2D3F283897F70012CA7C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 				16BF2D3C283881640012CA7C /* DetailViewController.swift */,
-				ADE68062283226E700B734C9 /* DateRecommendationTableViewCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -204,20 +230,31 @@
 			path = Form;
 			sourceTree = "<group>";
 		};
-		16BF2D482838D6CD0012CA7C /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				16BF2D412838A51D0012CA7C /* ScheduleTableViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		16BF2D492838E3130012CA7C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				16BF2D4A2838E3240012CA7C /* Const.swift */,
+				163BFBB628C39477009282EE /* UITableView+Ext.swift */,
+				16247FCB2832843B00D885B3 /* Date+Ext.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C50BB177BC199D6B7A343EFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2231CCE1A488BC41B0BD4167 /* Pods_Moton.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0FAE02802D81FE96D555F5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				530770CDA5658F4C767E742E /* Pods-Moton.debug.xcconfig */,
+				C2926506F12DA6676101A424 /* Pods-Moton.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1618D8E3282FF876009DC3AF /* Build configuration list for PBXNativeTarget "Moton" */;
 			buildPhases = (
+				225BF40B6892A4CF85DDD5F5 /* [CP] Check Pods Manifest.lock */,
 				1618D8C8282FF874009DC3AF /* Sources */,
 				1618D8C9282FF874009DC3AF /* Frameworks */,
 				1618D8CA282FF874009DC3AF /* Resources */,
+				0FFEF19EAFA72962F4BA9FC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,20 +329,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FFEF19EAFA72962F4BA9FC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moton/Pods-Moton-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moton/Pods-Moton-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moton/Pods-Moton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		225BF40B6892A4CF85DDD5F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1618D8C8282FF874009DC3AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160219DF28E6CB3200B0CF72 /* UpCommingViewModel.swift in Sources */,
+				160219DD28E6C96700B0CF72 /* DateViewModel.swift in Sources */,
 				1618D8D4282FF874009DC3AF /* DateViewController.swift in Sources */,
 				16BF2D4B2838E3240012CA7C /* Const.swift in Sources */,
 				1618D8D0282FF874009DC3AF /* AppDelegate.swift in Sources */,
 				16247FCA2832527100D885B3 /* Schedule.swift in Sources */,
-				163BC66328354E06009CFBD8 /* DateRecommendation.swift in Sources */,
+				163BC66328354E06009CFBD8 /* FreeTime.swift in Sources */,
 				ADAD491728391A1D00A6D981 /* RewatchDatePickerViewController.swift in Sources */,
+				163BFBB728C39477009282EE /* UITableView+Ext.swift in Sources */,
+				160219D928E4B17700B0CF72 /* WatchHistoryViewModel.swift in Sources */,
 				16BF2D432838A51D0012CA7C /* ScheduleTableViewCell.swift in Sources */,
+				160219D728E2167100B0CF72 /* FreeTimeViewModel.swift in Sources */,
 				16BF2D462838A53D0012CA7C /* UpCommingViewController.swift in Sources */,
 				AD8F18F2283A02150045434F /* ShowTitleViewController.swift in Sources */,
+				163BFBB928C3A0FD009282EE /* EventStore.swift in Sources */,
 				1618D8D2282FF874009DC3AF /* SceneDelegate.swift in Sources */,
 				16BF2D342837CE240012CA7C /* SummaryViewController.swift in Sources */,
 				1618D8DA282FF874009DC3AF /* Moton.xcdatamodeld in Sources */,
@@ -311,8 +398,9 @@
 				ADCFDA332837EF61008DE69B /* FormAddEventViewController.swift in Sources */,
 				4F9EA8F528315E3300CE6920 /* WatchHistoryViewController.swift in Sources */,
 				ADE68064283226E700B734C9 /* DateRecommendationTableViewCell.swift in Sources */,
+				160219DB28E6C6C600B0CF72 /* RewatchDatePickerViewModel.swift in Sources */,
 				16BF2D372837D0D40012CA7C /* DateTableViewCell.swift in Sources */,
-				16247FCC2832843B00D885B3 /* Date+Moton.swift in Sources */,
+				16247FCC2832843B00D885B3 /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +542,7 @@
 		};
 		1618D8E4282FF876009DC3AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 530770CDA5658F4C767E742E /* Pods-Moton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +572,7 @@
 		};
 		1618D8E5282FF876009DC3AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2926506F12DA6676101A424 /* Pods-Moton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -5,109 +5,67 @@
 //  Created by Tubagus Adhitya Permana on 14/05/22.
 import UIKit
 import EventKit
+import RxSwift
 
 class DateViewController: UIViewController {
-  
-  @IBOutlet weak var dateRecomTableView: UITableView!
-  
-  var dateRecommendation: [Date] = []
-  var selectedDate: Date?
-  
-  let eventStore = EKEventStore()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setUpTable()
-    dateRecomTableView.delegate = self
-    dateRecomTableView.dataSource = self
-    initDateRecommendation()
-    requestAccessCalendar()
-  }
-  
-  func initDateRecommendation() {
-    let today = Date()
     
-    dateRecommendation = [
-      getDateRecommendation(date: today, addDay: 0),
-      getDateRecommendation(date: today, addDay: 1),
-      getDateRecommendation(date: today, addDay: 2),
-      getDateRecommendation(date: today, addDay: 3),
-      getDateRecommendation(date: today, addDay: 4),
-      getDateRecommendation(date: today, addDay: 5),
-      getDateRecommendation(date: today, addDay: 6)
-    ]
-  }
-  
-  func getDateRecommendation(date: Date, addDay: Int) -> Date {
-    let date = Calendar.current.date(byAdding: .day, value: addDay, to: Date())
+    @IBOutlet weak var dateRecomTableView: UITableView!
+    var selectedDate: Date?
     
-    return date!
-  }
-  
-  func requestAccessCalendar() {
-    eventStore.requestAccess(to: .event) { success, error in
-      if success && error == nil {
-        print("Success")
-      } else {
-        print("Error")
-      }
+    let viewModel = DateViewModel()
+    let bag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dateRecomTableView.rx.setDelegate(self).disposed(by: bag)
+        setupCellTapHandling()
+        bindTableView()
+        requestAccessCalendar()
     }
-  }
-  
-  func yearMonthDayString(date: Date) -> String
-  {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
-    return dateFormatter.string(from: date) // MM-dd-yyyy
-  }
-  
-  func setUpTable () {
-    let nibDateRecommendation = UINib(nibName: "DateTableViewCell", bundle: nil)
     
-    dateRecomTableView.register(nibDateRecommendation, forCellReuseIdentifier: dateTableViewCellId)
+    func bindTableView () {
+        let nibDateRecommendation = UINib(nibName: "DateTableViewCell", bundle: nil)
+        dateRecomTableView.register(nibDateRecommendation, forCellReuseIdentifier: dateTableViewCellId)
+        
+            viewModel.listDateRecommendation.bind(to: dateRecomTableView.rx.items(cellIdentifier: dateTableViewCellId, cellType: DateTableViewCell.self)) {
+                (row, item, cell) in
+                cell.setCellWithValueOf(item)
+            }.disposed(by: bag)
+        
+        viewModel.generateListDateRecommendation()
+    }
     
-  }
-  
-  //Set ukuran height cell
-  func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 90.0
-  }
-}
-
-
-extension DateViewController: UITableViewDataSource {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return dateRecommendation.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: dateTableViewCellId,for: indexPath) as! DateTableViewCell
-    let date = dateRecommendation[indexPath.row]
+    func setupCellTapHandling() {
+        dateRecomTableView.rx.modelSelected(Date.self).subscribe(onNext: {item in
+            self.selectedDate = item
+            self.performSegue(withIdentifier: "showDetail", sender: self.selectedDate)
+        }).disposed(by: bag)
+    }
     
-    cell.backgroundColor = UIColor.white
-    cell.timeLabel.text = yearMonthDayString(date: date)
-    cell.contentView.backgroundColor = UIColor(named: "SeparateColor")
-    cell.containerView.layer.cornerRadius = 10
+    func requestAccessCalendar() {
+        EventStore.shared.requestAccess(to: .event) { success, error in
+            if success && error == nil {
+                print("Success")
+            } else {
+                print("Error")
+            }
+        }
+    }
     
-    return cell
-  }
 }
 
 
 extension DateViewController: UITableViewDelegate {
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    selectedDate = dateRecommendation[indexPath.row]
-    performSegue(withIdentifier: "showDetail", sender: selectedDate)
-  }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "showDetail" {
-      let controller = segue.destination as! DetailViewController
-      controller.date = selectedDate
+    func tableView (_ tableView : UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90.0
     }
-  }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let controller = segue.destination as! DetailViewController
+            controller.date = selectedDate
+        }
+    }
 }
 
